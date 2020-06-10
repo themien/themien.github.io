@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Clustering - Exploring DOCG areas in Veneto</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  <style type="text/css">
+    .highlight .hll {
+      background-color: #ffffcc
+    }
+
+    .highlight {
+      background: #f8f8f8;
+    }
+
+    .highlight .c {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment */
+    .highlight .err {
+      border: 1px solid #FF0000
+    }
+
+    /* Error */
+    .highlight .k {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword */
+    .highlight .o {
+      color: #666666
+    }
+
+    /* Operator */
+    .highlight .ch {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.Hashbang */
+    .highlight .cm {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.Multiline */
+    .highlight .cp {
+      color: #BC7A00
+    }
+
+    /* Comment.Preproc */
+    .highlight .cpf {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.PreprocFile */
+    .highlight .c1 {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.Single */
+    .highlight .cs {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.Special */
+    .highlight .gd {
+      color: #A00000
+    }
+
+    /* Generic.Deleted */
+    .highlight .ge {
+      font-style: italic
+    }
+
+    /* Generic.Emph */
+    .highlight .gr {
+      color: #FF0000
+    }
+
+    /* Generic.Error */
+    .highlight .gh {
+      color: #000080;
+      font-weight: bold
+    }
+
+    /* Generic.Heading */
+    .highlight .gi {
+      color: #00A000
+    }
+
+    /* Generic.Inserted */
+    .highlight .go {
+      color: #888888
+    }
+
+    /* Generic.Output */
+    .highlight .gp {
+      color: #000080;
+      font-weight: bold
+    }
+
+    /* Generic.Prompt */
+    .highlight .gs {
+      font-weight: bold
+    }
+
+    /* Generic.Strong */
+    .highlight .gu {
+      color: #800080;
+      font-weight: bold
+    }
+
+    /* Generic.Subheading */
+    .highlight .gt {
+      color: #0044DD
+    }
+
+    /* Generic.Traceback */
+    .highlight .kc {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword.Constant */
+    .highlight .kd {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword.Declaration */
+    .highlight .kn {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword.Namespace */
+    .highlight .kp {
+      color: #008000
+    }
+
+    /* Keyword.Pseudo */
+    .highlight .kr {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword.Reserved */
+    .highlight .kt {
+      color: #B00040
+    }
+
+    /* Keyword.Type */
+    .highlight .m {
+      color: #666666
+    }
+
+    /* Literal.Number */
+    .highlight .s {
+      color: #BA2121
+    }
+
+    /* Literal.String */
+    .highlight .na {
+      color: #7D9029
+    }
+
+    /* Name.Attribute */
+    .highlight .nb {
+      color: #008000
+    }
+
+    /* Name.Builtin */
+    .highlight .nc {
+      color: #0000FF;
+      font-weight: bold
+    }
+
+    /* Name.Class */
+    .highlight .no {
+      color: #880000
+    }
+
+    /* Name.Constant */
+    .highlight .nd {
+      color: #AA22FF
+    }
+
+    /* Name.Decorator */
+    .highlight .ni {
+      color: #999999;
+      font-weight: bold
+    }
+
+    /* Name.Entity */
+    .highlight .ne {
+      color: #D2413A;
+      font-weight: bold
+    }
+
+    /* Name.Exception */
+    .highlight .nf {
+      color: #0000FF
+    }
+
+    /* Name.Function */
+    .highlight .nl {
+      color: #A0A000
+    }
+
+    /* Name.Label */
+    .highlight .nn {
+      color: #0000FF;
+      font-weight: bold
+    }
+
+    /* Name.Namespace */
+    .highlight .nt {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Name.Tag */
+    .highlight .nv {
+      color: #19177C
+    }
+
+    /* Name.Variable */
+    .highlight .ow {
+      color: #AA22FF;
+      font-weight: bold
+    }
+
+    /* Operator.Word */
+    .highlight .w {
+      color: #bbbbbb
+    }
+
+    /* Text.Whitespace */
+    .highlight .mb {
+      color: #666666
+    }
+
+    /* Literal.Number.Bin */
+    .highlight .mf {
+      color: #666666
+    }
+
+    /* Literal.Number.Float */
+    .highlight .mh {
+      color: #666666
+    }
+
+    /* Literal.Number.Hex */
+    .highlight .mi {
+      color: #666666
+    }
+
+    /* Literal.Number.Integer */
+    .highlight .mo {
+      color: #666666
+    }
+
+    /* Literal.Number.Oct */
+    .highlight .sa {
+      color: #BA2121
+    }
+
+    /* Literal.String.Affix */
+    .highlight .sb {
+      color: #BA2121
+    }
+
+    /* Literal.String.Backtick */
+    .highlight .sc {
+      color: #BA2121
+    }
+
+    /* Literal.String.Char */
+    .highlight .dl {
+      color: #BA2121
+    }
+
+    /* Literal.String.Delimiter */
+    .highlight .sd {
+      color: #BA2121;
+      font-style: italic
+    }
+
+    /* Literal.String.Doc */
+    .highlight .s2 {
+      color: #BA2121
+    }
+
+    /* Literal.String.Double */
+    .highlight .se {
+      color: #BB6622;
+      font-weight: bold
+    }
+
+    /* Literal.String.Escape */
+    .highlight .sh {
+      color: #BA2121
+    }
+
+    /* Literal.String.Heredoc */
+    .highlight .si {
+      color: #BB6688;
+      font-weight: bold
+    }
+
+    /* Literal.String.Interpol */
+    .highlight .sx {
+      color: #008000
+    }
+
+    /* Literal.String.Other */
+    .highlight .sr {
+      color: #BB6688
+    }
+
+    /* Literal.String.Regex */
+    .highlight .s1 {
+      color: #BA2121
+    }
+
+    /* Literal.String.Single */
+    .highlight .ss {
+      color: #19177C
+    }
+
+    /* Literal.String.Symbol */
+    .highlight .bp {
+      color: #008000
+    }
+
+    /* Name.Builtin.Pseudo */
+    .highlight .fm {
+      color: #0000FF
+    }
+
+    /* Name.Function.Magic */
+    .highlight .vc {
+      color: #19177C
+    }
+
+    /* Name.Variable.Class */
+    .highlight .vg {
+      color: #19177C
+    }
+
+    /* Name.Variable.Global */
+    .highlight .vi {
+      color: #19177C
+    }
+
+    /* Name.Variable.Instance */
+    .highlight .vm {
+      color: #19177C
+    }
+
+    /* Name.Variable.Magic */
+    .highlight .il {
+      color: #666666
+    }
+
+    /* Literal.Number.Integer.Long */
+  </style>
+  <style type="text/css">
+    /* Temporary definitions which will become obsolete with Notebook release 5.0 */
+    .ansi-black-fg {
+      color: #3E424D;
+    }
+
+    .ansi-black-bg {
+      background-color: #3E424D;
+    }
+
+    .ansi-black-intense-fg {
+      color: #282C36;
+    }
+
+    .ansi-black-intense-bg {
+      background-color: #282C36;
+    }
+
+    .ansi-red-fg {
+      color: #E75C58;
+    }
+
+    .ansi-red-bg {
+      background-color: #E75C58;
+    }
+
+    .ansi-red-intense-fg {
+      color: #B22B31;
+    }
+
+    .ansi-red-intense-bg {
+      background-color: #B22B31;
+    }
+
+    .ansi-green-fg {
+      color: #00A250;
+    }
+
+    .ansi-green-bg {
+      background-color: #00A250;
+    }
+
+    .ansi-green-intense-fg {
+      color: #007427;
+    }
+
+    .ansi-green-intense-bg {
+      background-color: #007427;
+    }
+
+    .ansi-yellow-fg {
+      color: #DDB62B;
+    }
+
+    .ansi-yellow-bg {
+      background-color: #DDB62B;
+    }
+
+    .ansi-yellow-intense-fg {
+      color: #B27D12;
+    }
+
+    .ansi-yellow-intense-bg {
+      background-color: #B27D12;
+    }
+
+    .ansi-blue-fg {
+      color: #208FFB;
+    }
+
+    .ansi-blue-bg {
+      background-color: #208FFB;
+    }
+
+    .ansi-blue-intense-fg {
+      color: #0065CA;
+    }
+
+    .ansi-blue-intense-bg {
+      background-color: #0065CA;
+    }
+
+    .ansi-magenta-fg {
+      color: #D160C4;
+    }
+
+    .ansi-magenta-bg {
+      background-color: #D160C4;
+    }
+
+    .ansi-magenta-intense-fg {
+      color: #A03196;
+    }
+
+    .ansi-magenta-intense-bg {
+      background-color: #A03196;
+    }
+
+    .ansi-cyan-fg {
+      color: #60C6C8;
+    }
+
+    .ansi-cyan-bg {
+      background-color: #60C6C8;
+    }
+
+    .ansi-cyan-intense-fg {
+      color: #258F8F;
+    }
+
+    .ansi-cyan-intense-bg {
+      background-color: #258F8F;
+    }
+
+    .ansi-white-fg {
+      color: #C5C1B4;
+    }
+
+    .ansi-white-bg {
+      background-color: #C5C1B4;
+    }
+
+    .ansi-white-intense-fg {
+      color: #A1A6B2;
+    }
+
+    .ansi-white-intense-bg {
+      background-color: #A1A6B2;
+    }
+
+    .ansi-bold {
+      font-weight: bold;
+    }
+  </style>
+
+
+  <style type="text/css">
+    /* Overrides of notebook CSS for static HTML export */
+    body {
+      overflow: visible;
+      /* padding: 8px; */
+    }
+
+    div#notebook {
+      overflow: visible;
+      border-top: none;
+    }
+
+    @media print {
+      div.cell {
+        display: block;
+        page-break-inside: avoid;
+      }
+
+      div.output_wrapper {
+        display: block;
+        page-break-inside: avoid;
+      }
+
+      div.output {
+        display: block;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+
+  <!-- Loading mathjax macro -->
+  <!-- Load mathjax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+  <!-- MathJax configuration -->
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true,
+              processEnvironments: true
+          },
+          // Center justify equations in code and markdown cells. Elsewhere
+          // we use CSS to left justify single line equations in code cells.
+          displayAlign: 'center',
+          "HTML-CSS": {
+              styles: {'.MathJax_Display': {"margin": 0}},
+              linebreaks: { automatic: true }
+          }
+      });
+      </script>
+  <!-- End of mathjax configuration -->
+</head>
+
+<body>
+
+  <!-- Navigation
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post.html">Sample Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/wine.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>IBM Data Science Capstone</h1>
+            <h2 class="subheading">Clustering Veneto cities in the
+              proximity
+              of DOCG areas</h2>
+            <span class="meta">Posted by
+              <a href="#">Damiano Cangini</a>
+              on June 10, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p><strong>TABLE OF CONTENTS</strong></p>
+                <ol>
+                  <li><a href="#introduction">Introduction</a>
+                    <ol>
+                      <li><a href="#preface">Italian wine classification</a></li>
+                      <li><a href="#veneto">Veneto</a></li>
+                      <li><a href="#objective">Our objective</a></li>
+                    </ol>
+                  </li>
+                  <li><a href="#data">Data</a>
+                    <ol>
+                      <li><a href="#docg_data">DOCG geographical areas</a></li>
+                      <li><a href="#comunes_data">Veneto municipalities geographical areas</a></li>
+                      <li><a href="#touristic_data">Touristic cities</a> </li>
+                      <li><a href="#foursquare_data">Foursquare API</a></li>
+                    </ol>
+                  </li>
+                  <li><a href="#metodology">Methodology</a> </li>
+                  <li><a href="#results">Results</a></li>
+                  <li><a href="#discussion">Discussion</a></li>
+                  <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h2 id="1.-Introduction-">1. Introduction <a id="introduction" /><a class="anchor-link"
+                    href="#1.-Introduction-">&#182;</a></h2>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>In this project we will cluster cities located in the proximity of DOCG areas in the Veneto regions,
+                  in
+                  Italy. In order to do so, we will first need to get familiar with some of the key concepts.</p>
+                <p>We will start with a brief introduction to italian wine classification and Veneto, and then we will
+                  dive
+                  in how we will be tackling this project.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="A.-Italian-wine-classification-">A. Italian wine classification <a id="preface" /><a
+                    class="anchor-link" href="#A.-Italian-wine-classification-">&#182;</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>Wine is produced in every region of Italy, which is home to some of the oldest wine-producing areas
+                  in
+                  the world. Italy is the world's largest producer of wine, with an area of 702,000 hectares under
+                  vineyard
+                  cultivation.</p>
+                <p>In 1963, the first official Italian system of classification of wines was launched. Since then,
+                  several
+                  modifications and additions to the legislation have been made. The last modification established four
+                  basic wine categories. The categories, from the bottom to the top level, are:</p>
+                <ul>
+                  <li>Vino da Tavola: generic wines that are made either mostly from one kind of authorized
+                    'international'
+                    grape variety or entirely from two or more of them.</li>
+                  <li>Vini IGT: wines produced in a specific territory within Italy. These need following a series of
+                    specific and precise regulations on authorized varieties, viticultural and vinification practices,
+                    labeling instructions, etc. </li>
+                  <li>Vini DOP: This category includes two sub-categories: <ul>
+                      <li>Vini DOC: DOC wines generally come from smaller regions that are particularly vocated for
+                        their
+                        climatic and geological characteristics, quality, and originality of local winemaking
+                        traditions.
+                      </li>
+                      <li><strong>Vini DOCG</strong>: In addition to fulfilling the requisites for DOC wines, DOCG wines
+                        must pass stricter analyses prior to commercialization. They must also demonstrate a superior
+                        commercial success. </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>DOCG wines are the top level wines produced in Italy, therefore the areas where they are produced are
+                  generally popular touristic destinations.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="B.-Veneto-">B. Veneto <a id="veneto" /><a class="anchor-link" href="#B.-Veneto-">&#182;</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>Veneto is a gem of a region in the northeast corner of Italy. Bound on the west by Lake Garda, on the
+                  north by the Dolomite Mountains and on the east by the Adriatic Sea, the landscape of the Veneto is
+                  rich
+                  and varied. From the grandeur of crumbly old Venice to the medieval flavor of Bassano del Grappa, and
+                  on
+                  to Belluno, a striking town that's a gateway for visiting the Dolomites, the Veneto makes a
+                  fascinating
+                  region to explore.</p>
+                <p>Veneto is one of the leading Italian regions in terms of quantity and quality production of grapes.
+                  The
+                  wines produced in this region are famous throughout the world: Prosecco, Amarone, Recioto, Soave,
+                  Valpolicella and Bardolino, are only a few of the names of wines known at international level.</p>
+                <p>Veneto is also the region that can count the highest number of DOCG areas in Italy.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="C.-Our-objective">C. Our objective<a class="anchor-link" href="#C.-Our-objective">&#182;</a>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>Now that we are familiar with DOCG areas and the Veneto region we can define our objective.</p>
+                <p>There are many beautiful cities located within or in proximity of DOCG areas. These cities offer the
+                  most
+                  different kind of activities, venues and places of interest. If a person is interested in visiting the
+                  DOCG vineyards and stay in a city nearby, it would be great if they were able to choose a destination
+                  based on their preferred type of activities. That is the purpose of our project.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h2 id="2.-Data-">2. Data <a id="data" /><a class="anchor-link" href="#2.-Data-">&#182;</a></h2>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>The data used in this project has been made freely available by the Veneto region through it <a
+                    href="https://idt2.regione.veneto.it/">geoportal</a>. There we can download the datasets and prepare
+                  them for our analysis.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="A.-DOCG-geographical-areas-">A. DOCG geographical areas <a id="section21" /><a
+                    class="anchor-link" href="#A.-DOCG-geographical-areas-">&#182;</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>The geographical information regading DOCG appellations area is contained in an <em>SHP</em> file.
+                </p>
+                <p>A SHP (shapefile) is a simple, nontopological format for storing the geometric location and attribute
+                  information of geographic features. Geographic features in a shapefile can be represented by points,
+                  lines, or polygons (areas). In Python, in order to access the shapefile we can use the
+                  <code>pyshp</code>
+                  library. We then need to convert the file to <em>geojson</em> format in order to utilise it with
+                  <code>folium</code> for our maps plotting.</p>
+                <p>After having created the dataset we can see the first 5 rows:</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <table border="1" class="dataframe">
+                  <thead>
+                    <tr style="text-align: right;">
+                      <th></th>
+                      <th>appellation</th>
+                      <th>code</th>
+                      <th>zone</th>
+                      <th>coords</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>0</th>
+                      <td>RECIOTO SOAVE CLASSICO</td>
+                      <td>A021</td>
+                      <td>A</td>
+                      <td>[(11.252029507865142, 45.41758433331832), (11....</td>
+                    </tr>
+                    <tr>
+                      <th>1</th>
+                      <td>RECIOTO SOAVE</td>
+                      <td>A021</td>
+                      <td>X</td>
+                      <td>[(11.207064614961942, 45.4507371295929), (11.2...</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>BARDOLINO SUPERIORE CLASSICO</td>
+                      <td>A025</td>
+                      <td>A</td>
+                      <td>[(10.794778650134427, 45.518760038125784), (10...</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>BARDOLINO SUPERIORE</td>
+                      <td>A025</td>
+                      <td>X</td>
+                      <td>[(10.843049258063267, 45.43160165449561), (10....</td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>SOAVE SUPERIORE CLASSICO</td>
+                      <td>A026</td>
+                      <td>A</td>
+                      <td>[(11.252029507865142, 45.41758433331832), (11....</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>There are four features:</p>
+                <ul>
+                  <li><b>appellation</b>: the name of the DOCG</li>
+                  <li>code: the area code</li>
+                  <li>zone: the zone type</li>
+                  <li><b>coords</b>: a list of latitude and longitude coordinates</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>And here is the data plotted on a map.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+              <div class="prompt input_prompt">In&nbsp;[3]:</div>
+              <div class="inner_cell">
+                <div class="input_area">
+                  <div class=" highlight hl-ipython3">
+                    <pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;maps/docgs.html&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="output_wrapper">
+              <div class="output">
+
+
+                <div class="output_area">
+
+                  <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+                  <div class="output_html rendered_html output_subarea output_execute_result">
+
+                    <iframe width="1000" height="450" src="maps/docgs.html" frameborder="0" allowfullscreen></iframe>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="B.-Veneto-municipalities-geographical-areas-">B. Veneto municipalities geographical areas <a
+                    id="comunes_data" /><a class="anchor-link"
+                    href="#B.-Veneto-municipalities-geographical-areas-">&#182;</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>We managed to get ahold another <em>SHP</em> file containing the georaphical coordinates of every
+                  municipality in the Veneto region. After doing the same process as the previous shapefile we have
+                  stored
+                  the information in both a <code>DataFrame</code> and a geojson file.</p>
+                <p>This is how the data looks:</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <table border="1" class="dataframe">
+                  <thead>
+                    <tr style="text-align: right;">
+                      <th></th>
+                      <th>Comune</th>
+                      <th>Prov</th>
+                      <th>CODISTAT</th>
+                      <th>NOMCOM</th>
+                      <th>PROVINCIA</th>
+                      <th>AREA</th>
+                      <th>PERIMETER</th>
+                      <th>ID1</th>
+                      <th>coords</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>0</th>
+                      <td>29033</td>
+                      <td>29</td>
+                      <td>29033</td>
+                      <td>Occhiobello</td>
+                      <td>RO</td>
+                      <td>3.251909e+07</td>
+                      <td>28900.15864</td>
+                      <td>527</td>
+                      <td>[(11.574961743249316, 44.95070722627497), (11....</td>
+                    </tr>
+                    <tr>
+                      <th>1</th>
+                      <td>29025</td>
+                      <td>29</td>
+                      <td>29025</td>
+                      <td>Gaiba</td>
+                      <td>RO</td>
+                      <td>1.206460e+07</td>
+                      <td>18468.00608</td>
+                      <td>526</td>
+                      <td>[(11.479809311494138, 44.97789519756071), (11....</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>29009</td>
+                      <td>29</td>
+                      <td>29009</td>
+                      <td>Canaro</td>
+                      <td>RO</td>
+                      <td>3.266567e+07</td>
+                      <td>33974.60289</td>
+                      <td>525</td>
+                      <td>[(11.661722276937734, 44.97455175786645), (11....</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>29021</td>
+                      <td>29</td>
+                      <td>29021</td>
+                      <td>Ficarolo</td>
+                      <td>RO</td>
+                      <td>1.796072e+07</td>
+                      <td>21152.56640</td>
+                      <td>524</td>
+                      <td>[(11.440782497382445, 44.98232147591316), (11....</td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>29045</td>
+                      <td>29</td>
+                      <td>29045</td>
+                      <td>Stienta</td>
+                      <td>RO</td>
+                      <td>2.408899e+07</td>
+                      <td>24452.03201</td>
+                      <td>523</td>
+                      <td>[(11.559372185120054, 44.98162314511416), (11....</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>We do not need to focus on any of the fields here besides <strong>NOMCOM</strong>, which is the name
+                  of
+                  the municipality, and the <strong>coords</strong> that we will need for plotting.</p>
+                <p>This is how the data looks on a map.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+              <div class="prompt input_prompt">In&nbsp;[6]:</div>
+              <div class="inner_cell">
+                <div class="input_area">
+                  <div class=" highlight hl-ipython3">
+                    <pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;maps/comunes.html&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="output_wrapper">
+              <div class="output">
+
+
+                <div class="output_area">
+
+                  <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+                  <div class="output_html rendered_html output_subarea output_execute_result">
+
+                    <iframe width="1000" height="500" src="maps/comunes.html" frameborder="0" allowfullscreen></iframe>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>This dataset will then be filtered to include only the cities relevant to our study.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="C.-Touristic-cities-">C. Touristic cities <a id="touristic_data" /><a class="anchor-link"
+                    href="#C.-Touristic-cities-">&#182;</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>The data stored in a <em>csv</em> file contains information on the amount of tourists visiting each
+                  of
+                  Veneto's comunes in a given year. The data was collected from 2003 to 2013. Here we can see the last 5
+                  rows:</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <table border="1" class="dataframe">
+                  <thead>
+                    <tr style="text-align: right;">
+                      <th></th>
+                      <th>year</th>
+                      <th>comune</th>
+                      <th>province</th>
+                      <th>n_tourists</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>5572</th>
+                      <td>2013</td>
+                      <td>Taglio di Po</td>
+                      <td>ROVIGO</td>
+                      <td>4819.0</td>
+                    </tr>
+                    <tr>
+                      <th>5573</th>
+                      <td>2013</td>
+                      <td>Trecenta</td>
+                      <td>ROVIGO</td>
+                      <td>482.0</td>
+                    </tr>
+                    <tr>
+                      <th>5574</th>
+                      <td>2013</td>
+                      <td>Villadose</td>
+                      <td>ROVIGO</td>
+                      <td>584.0</td>
+                    </tr>
+                    <tr>
+                      <th>5575</th>
+                      <td>2013</td>
+                      <td>Villamarzana</td>
+                      <td>ROVIGO</td>
+                      <td>NaN</td>
+                    </tr>
+                    <tr>
+                      <th>5576</th>
+                      <td>2013</td>
+                      <td>Porto Viro</td>
+                      <td>ROVIGO</td>
+                      <td>2566.0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>It contains information about:</p>
+                <ul>
+                  <li>year: the relevant year</li>
+                  <li>comune: the name of the municipality</li>
+                  <li>province: the name of the province</li>
+                  <li><strong>n_tourists</strong>: the number of tourists that have visited the comune that given year
+                  </li>
+                </ul>
+                <p>We selected the first 32 cities in proximity of DOCG areas by total number of tourists for our
+                  analysis.
+                  With the help of the Nominatim geolocator we managed to find the latitude and longitude coordinates of
+                  all
+                  city centers. The first five rows of our final dataset look like this:</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <table border="1" class="dataframe">
+                  <thead>
+                    <tr style="text-align: right;">
+                      <th></th>
+                      <th>latitude</th>
+                      <th>longitude</th>
+                    </tr>
+                    <tr>
+                      <th>comune</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Abano Terme</th>
+                      <td>45.360314</td>
+                      <td>11.789783</td>
+                    </tr>
+                    <tr>
+                      <th>Asiago</th>
+                      <td>45.875377</td>
+                      <td>11.510700</td>
+                    </tr>
+                    <tr>
+                      <th>Bardolino</th>
+                      <td>45.547559</td>
+                      <td>10.724215</td>
+                    </tr>
+                    <tr>
+                      <th>Bassano del Grappa</th>
+                      <td>45.766911</td>
+                      <td>11.734347</td>
+                    </tr>
+                    <tr>
+                      <th>Brenzone</th>
+                      <td>45.707599</td>
+                      <td>10.765873</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>Here is are the cities pinned on the map of the DOCG areas.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+              <div class="prompt input_prompt">In&nbsp;[9]:</div>
+              <div class="inner_cell">
+                <div class="input_area">
+                  <div class=" highlight hl-ipython3">
+                    <pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;maps/selected_cities.html&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+</pre>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="output_wrapper">
+              <div class="output">
+
+
+                <div class="output_area">
+
+                  <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+                  <div class="output_html rendered_html output_subarea output_execute_result">
+
+                    <iframe width="1000" height="450" src="maps/selected_cities.html" frameborder="0"
+                      allowfullscreen></iframe>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="D.-Foursquare-API-">D. Foursquare API <a id="foursquare_data" /><a class="anchor-link"
+                    href="#D.-Foursquare-API-">&#182;</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>We used the Foursquare API in order to find venues and places of interest in each of the locations.
+                </p>
+                <p>After leveraging the platform our final result is a dataset containg info about venues within these
+                  municipalities. A radius of 5km from each location was used in the search. We can have a look at some
+                  sample data .</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <table border="1" class="dataframe">
+                  <thead>
+                    <tr style="text-align: right;">
+                      <th></th>
+                      <th>city</th>
+                      <th>city_lat</th>
+                      <th>city_lon</th>
+                      <th>venue</th>
+                      <th>venue_lat</th>
+                      <th>venue_lon</th>
+                      <th>category</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>0</th>
+                      <td>Abano Terme</td>
+                      <td>45.360314</td>
+                      <td>11.789783</td>
+                      <td>L'ombra Che Conta</td>
+                      <td>45.361623</td>
+                      <td>11.790219</td>
+                      <td>Trattoria/Osteria</td>
+                    </tr>
+                    <tr>
+                      <th>1</th>
+                      <td>Abano Terme</td>
+                      <td>45.360314</td>
+                      <td>11.789783</td>
+                      <td>Abano Grand Hotel</td>
+                      <td>45.354321</td>
+                      <td>11.785206</td>
+                      <td>Hotel</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>Abano Terme</td>
+                      <td>45.360314</td>
+                      <td>11.789783</td>
+                      <td>Panoramic Hotel Plaza</td>
+                      <td>45.354413</td>
+                      <td>11.783820</td>
+                      <td>Hotel</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>Abano Terme</td>
+                      <td>45.360314</td>
+                      <td>11.789783</td>
+                      <td>Grand Hotel Trieste &amp; Victoria</td>
+                      <td>45.352713</td>
+                      <td>11.781310</td>
+                      <td>Hotel</td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>Abano Terme</td>
+                      <td>45.360314</td>
+                      <td>11.789783</td>
+                      <td>Parco Urbano Termale</td>
+                      <td>45.351798</td>
+                      <td>11.783535</td>
+                      <td>Park</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>The information conatined stores information about:</p>
+                <ul>
+                  <li><strong>city</strong>: the municipality</li>
+                  <li>city_lat: the latitude of the municipality</li>
+                  <li>city_lon: the longitude of the municipality</li>
+                  <li>venue: the venue name</li>
+                  <li>venue_lat: the latitude of the venue</li>
+                  <li>venue_lon: the longitude of the venue</li>
+                  <li><strong>category</strong>: the category of the venue</li>
+                </ul>
+                <p>Our query returned a total of 1925 venues in the areas of interest. We can the first five rows of the
+                  table containing the total number of venues found for each category.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <table border="1" class="dataframe">
+                  <thead>
+                    <tr style="text-align: right;">
+                      <th></th>
+                      <th>venues</th>
+                    </tr>
+                    <tr>
+                      <th>category</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Accessories Store</th>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <th>Agriturismo</th>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <th>American Restaurant</th>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <th>Argentinian Restaurant</th>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>Art Gallery</th>
+                      <td>3</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>After all the datasets are acquired we are now ready to start the analysis.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h2 id="3.-Methodology">3. Methodology<a class="anchor-link" href="#3.-Methodology">&#182;</a></h2>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>This section represents the main component of our analysis. As a reminder our purpose is to recommend
+                  cities based on some common activities that can be done in those particular locations. As always we
+                  start
+                  with some exploratory data analysis. In particular, our first question is to see whether these
+                  municipalities have venue categories in common.</p>
+                <p>We can plot the top 5 categories for each of the comunes.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p><img src='img/top_5_per_location.png' /></p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>It is definetly showing some similarities. In particular we can see that some areas have a more
+                  maritime
+                  kind of venue or activity, there are also some areas close to a major amusement park. We can see that
+                  food
+                  venues are also very popular in all of this locations.</p>
+                <p>We again need to perform some transformations to our data so that we are able to cluster the
+                  municipalities. We will approach the clustering problem by implementing the <em>k-means</em>
+                  algorithm.
+                  <em>k-means</em> is a distance-based method that iteratively updates the location of k cluster
+                  centroids
+                  until convergence. The main user-defined "ingredients" of the <em>k-means</em> algorithm are the
+                  distance
+                  function (often Euclidean distance) and the number of clusters <em>k</em>. This parameter needs to be
+                  set
+                  according to the application or problem domain.</p>
+                <p>In a nutshell, <em>k-means</em> groups the data by minimizing the sum of squared distances between
+                  the
+                  data points and their respective closest centroid. It is particulary used in problems involving
+                  spatial
+                  data.</p>
+                <p>In Python we can use the <code>KMeans</code> class from scikit-learn. We analysed the inertias for
+                  different values of <em>k</em> and picked 5 as our hyperparameter. Here we can see a plot of inertia
+                  values for different values of <em>k</em>.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p><img src='img/k-means_inertia.png' /></p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>After fitting our model we are then able to apply the clusters to the municipalities. Following are
+                  the
+                  first five rows of the municipalities with their assigned cluster.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <table border="1" class="dataframe">
+                  <thead>
+                    <tr style="text-align: right;">
+                      <th></th>
+                      <th>city</th>
+                      <th>cluster</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>8</th>
+                      <td>Abano Terme</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <th>29</th>
+                      <td>Asiago</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <th>9</th>
+                      <td>Bardolino</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <th>26</th>
+                      <td>Bassano del Grappa</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <th>24</th>
+                      <td>Brenzone</td>
+                      <td>2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>This concludes the methodology section. In the next section we will be checking our results.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h2 id="4.-Results-">4. Results <a id="results" /><a class="anchor-link" href="#4.-Results-">&#182;</a>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>All of our cities are now clustered into different groups. In order to recommend some particual group
+                  to
+                  a person wanting to visit the DOCG areas we will need to distinguish what the different clusters are
+                  and
+                  what are the discriminants that differentiate the classes.</p>
+                <p>As a first step we can visualize the different clusters.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing code_cell rendered">
+            <div class="input">
+              <div class="prompt input_prompt">In&nbsp;[14]:</div>
+              <div class="inner_cell">
+                <div class="input_area">
+                  <div class=" highlight hl-ipython3">
+                    <pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="s1">&#39;maps/cities_clustered.html&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">550</span><span class="p">)</span>
+</pre>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="output_wrapper">
+              <div class="output">
+
+
+                <div class="output_area">
+
+                  <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+                  <div class="output_html rendered_html output_subarea output_execute_result">
+
+                    <iframe width="1000" height="550" src="maps/cities_clustered.html" frameborder="0"
+                      allowfullscreen></iframe>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>Our next step is to analyse what the discriminants are and how the clusters were chosen. Here is a
+                  normalized table with the percentage of category of venue for each cluster.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <table border="1" class="dataframe">
+                  <thead>
+                    <tr style="text-align: right;">
+                      <th>cluster</th>
+                      <th>Accessories Store</th>
+                      <th>Agriturismo</th>
+                      <th>American Restaurant</th>
+                      <th>Argentinian Restaurant</th>
+                      <th>Art Gallery</th>
+                      <th>Art Museum</th>
+                      <th>...</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>0.012241</td>
+                      <td>0.011494</td>
+                      <td>0.021419</td>
+                      <td>0.01</td>
+                      <td>0.01</td>
+                      <td>0.01</td>
+                      <td>...</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>NaN</td>
+                      <td>0.018353</td>
+                      <td>0.018353</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>...</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.012937</td>
+                      <td>NaN</td>
+                      <td>0.02</td>
+                      <td>0.01</td>
+                      <td>...</td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>...</td>
+                    </tr>
+                    <tr>
+                      <th>5</th>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>With some further analysis we can differentiate the different clusters into 5 categories:</p>
+                <ul>
+                  <li>
+                    <h4><b>Cluster 1:</b></h4>
+                    This cluster contains the following cities: Asiago, Bassano del Grappa, Bussolengo, Eraclea, Iesolo,
+                    Mira, Mogliano Veneto, Noventa di Piave, Padova, San Giovanni Lupatoto, San Michele al Tagliamento,
+                    Treviso, Verona, Vicenza and Villafranca di Verona. It includes spas, river walks and cocktail bars.
+                  </li>
+                  <li>
+                    <h4><b>Cluster 2</b></h4>
+                    This cluster includes the cities of Castelnuovo del Garda and Peschiera del Garda. These locations
+                    are
+                    situated in the proximity of an amusement park.
+                  </li>
+                  <li>
+                    <h4><b>Cluster 3:</b></h4>
+                    Venice, Abano Terme, Brenzone, Garda, Montegrotto Terme and Preganziol form our third cluster. This
+                    cluster offers plenty of hotels, a mixuture of gastonomic venues as well as some spas.
+                  </li>
+                  <li>
+                    <h4><b>Cluster 4:</b></h4>
+                    Is almost entirely made up of the towns in proximity of lake Garda. Bardolino, Costermano, Lazise,
+                    Quarto d'Altino, San Zeno di Montagna and Torri del Benaco form this cluster. The majority of the
+                    venues
+                    are food and wine related.
+                  </li>
+                  <li>
+                    <h4><b>Cluster 5:</b></h4>
+                    This includes the maritime areas situated on the gulf of Venice and offers beaches, seafood
+                    restaurants
+                    and resorts. These municipalities included are Caorle, Cavallino-Treporti and Chioggia.
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h2 id="5.-Discussion-">5. Discussion <a id="discussion" /><a class="anchor-link"
+                    href="#5.-Discussion-">&#182;</a></h2>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>From what we have concluded in our results section we can propose different destinations based on the
+                  type of activities a person visiting the DOCG areas would like to do.</p>
+                <p>If the person is looking for a relaxing style of holiday our go to pick would be amongst cities in
+                  <strong>Cluster 1</strong>. If we were to travel with our family for example, we could pick a town in
+                  <strong>Cluster 2</strong>. For a more traditional city holiday we could choose between the cities in
+                  <strong>Cluster 3</strong>. For a gastronomic and wine tour any of the cities in <strong>CLuster
+                    4</strong> would be ideal. Last but not least if we are looking for a beach style of holiday we
+                  would
+                  pick any of the municipalities in <strong>Cluster 5</strong>.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <table border="1" class="dataframe">
+                  <thead>
+                    <tr style="text-align: right;">
+                      <th>Cluster</th>
+                      <th>Cities forming the cluster</th>
+                      <th>Best suited for</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Asiago, Bassano del Grappa, Bussolengo, Eraclea, Iesolo, Mira, Mogliano Veneto, Noventa di
+                        Piave,
+                        Padova, San Giovanni Lupatoto, San Michele al Tagliamento, Treviso, Verona, Vicenza, Villafranca
+                        di
+                        Verona</td>
+                      <td>Relaxational destinations</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Castelnuovo del Garda, Peschiera del Garda</td>
+                      <td>Family destinations</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Venice, Abano Terme, Brenzone, Garda, Montegrotto Terme, Preganziol</td>
+                      <td>City experience</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Bardolino, Costermano, Lazise, Quarto d'Altino, San Zeno di Montagna, Torri del Benaco</td>
+                      <td>Gastronomical tour</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Caorle, Cavallino-Treporti, Chioggia</td>
+                      <td>Beach destination</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <p>It is important to know that this classification is limited to the information retreived through the
+                  Foursquare API. The amount of venues taken into consideration is only a fraction of the actual amount.
+                </p>
+
+              </div>
+            </div>
+          </div>
+          <div class="cell border-box-sizing text_cell rendered">
+            <div class="prompt input_prompt">
+            </div>
+            <div class="inner_cell">
+              <div class="text_cell_render border-box-sizing rendered_html">
+                <h2 id="6.-Conclusion-">6. Conclusion <a id="conclusion" /><a class="anchor-link"
+                    href="#6.-Conclusion-">&#182;</a></h2>
+                <p>This section concludes our exploration of cities located in proximity of DOCG areas and our project.
+                </p>
+                <p>We are now able to recommend locations based on selected type of activities. It is now up to you to
+                  decide what kind of holidays you would enjoy and deep in those wonderful areas made of outstanding
+                  wines
+                  and food.</p>
+                <p>The code and all the assets can be found at this <a
+                    href="https://github.com/themien/Veneto_DOCG">link</a>. The repo includes all the files used in this
+                  project, you can reproduce the problem and find some insights yourself.</p>
+                <p>If you have any questions do not esitate to contact me for further discussionor, even if you simply
+                  liked
+                  this project .</p>
+                <p>Hope you enjoyed this journey in the land of wines.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</body>
+
+
+
+
+</html>
