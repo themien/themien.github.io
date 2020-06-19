@@ -629,12 +629,12 @@
     </div>
   </header>
 
-    <!-- Post Content -->
+  <!-- Post Content -->
   <article>
     <div class="container">
       <div class="row">
         <div class="col-lg-10 col-md-10 mx-auto">
-          
+
           <!-- Start of notebook output-->
           <div class="cell border-box-sizing text_cell rendered">
             <div class="prompt input_prompt">
@@ -643,20 +643,10 @@
               <div class="text_cell_render border-box-sizing rendered_html">
                 <h2 id="1.-Introduction-">1. Introduction <a id="introduction" /><a class="anchor-link"
                     href="#1.-Introduction-">&#182;</a></h2>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <p>In this project we will cluster cities located in the proximity of DOCG areas in the Veneto region,
-                  in
-                  Italy. In order to do so, we will first need to get familiar with some of the key concepts.</p>
+                <p>In this project we will cluster cities located in the proximity of DOCG areas in the Veneto regions,
+                  in Italy. In order to do so, we will first need to get familiar with some of the key concepts.</p>
                 <p>We will start with a brief introduction to italian wine classification and Veneto, and then we will
-                  dive
-                  in how we will be tackling this project.</p>
+                  dive in how we will be tackling this project.</p>
 
               </div>
             </div>
@@ -664,10 +654,9 @@
           <div class="cell border-box-sizing text_cell rendered">
             <div class="prompt input_prompt">
             </div>
-
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <strong>TABLE OF CONTENTS</strong>
+                <p><strong>TABLE OF CONTENTS</strong></p>
                 <ol>
                   <li><a href="#introduction">Introduction</a>
                     <ol>
@@ -684,22 +673,12 @@
                       <li><a href="#foursquare_data">Foursquare API</a></li>
                     </ol>
                   </li>
-                  <li><a href="#methodology">Methodology</a> </li>
+                  <li><a href="#metodology">Methodology</a> </li>
                   <li><a href="#results">Results</a></li>
                   <li><a href="#discussion">Discussion</a></li>
                   <li><a href="#conclusion">Conclusion</a></li>
                 </ol>
 
-              </div>
-            </div>
-          </div>         
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <h3 id="A.-Italian-wine-classification-">A. Italian wine classification <a id="preface" /><a
-                    class="anchor-link" href="#A.-Italian-wine-classification-">&#182;</a></h3>
               </div>
             </div>
           </div>
@@ -708,28 +687,24 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="A.-Italian-wine-classification-">A. Italian wine classification <a id="preface" /><a
+                    class="anchor-link" href="#A.-Italian-wine-classification-">&#182;</a></h3>
                 <p>Wine is produced in every region of Italy, which is home to some of the oldest wine-producing areas
-                  in
-                  the world. Italy is the world's largest producer of wine, with an area of 702,000 hectares under
-                  vineyard
-                  cultivation.</p>
+                  in the world. Italy is the world's largest producer of wine, with an area of 702,000 hectares under
+                  vineyard cultivation.</p>
                 <p>In 1963, the first official Italian system of classification of wines was launched. Since then,
-                  several
-                  modifications and additions to the legislation have been made. The last modification established four
-                  basic wine categories. The categories, from the bottom to the top level, are:</p>
+                  several modifications and additions to the legislation have been made. The last modification
+                  established four basic wine categories. The categories, from the bottom to the top level, are:</p>
                 <ul>
                   <li>Vino da Tavola: generic wines that are made either mostly from one kind of authorized
-                    'international'
-                    grape variety or entirely from two or more of them.</li>
+                    'international' grape variety or entirely from two or more of them.</li>
                   <li>Vini IGT: wines produced in a specific territory within Italy. These need following a series of
                     specific and precise regulations on authorized varieties, viticultural and vinification practices,
                     labeling instructions, etc. </li>
                   <li>Vini DOP: This category includes two sub-categories: <ul>
                       <li>Vini DOC: DOC wines generally come from smaller regions that are particularly vocated for
-                        their
-                        climatic and geological characteristics, quality, and originality of local winemaking
-                        traditions.
-                      </li>
+                        their climatic and geological characteristics, quality, and originality of local winemaking
+                        traditions. </li>
                       <li><strong>Vini DOCG</strong>: In addition to fulfilling the requisites for DOC wines, DOCG wines
                         must pass stricter analyses prior to commercialization. They must also demonstrate a superior
                         commercial success. </li>
@@ -748,25 +723,13 @@
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
                 <h3 id="B.-Veneto-">B. Veneto <a id="veneto" /><a class="anchor-link" href="#B.-Veneto-">&#182;</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
                 <p>Veneto is a gem of a region in the northeast corner of Italy. Bound on the west by Lake Garda, on the
                   north by the Dolomite Mountains and on the east by the Adriatic Sea, the landscape of the Veneto is
-                  rich
-                  and varied. From the grandeur of crumbly old Venice to the medieval flavor of Bassano del Grappa, and
-                  on
-                  to Belluno, a striking town that's a gateway for visiting the Dolomites, the Veneto makes a
-                  fascinating
-                  region to explore.</p>
+                  rich and varied. From the grandeur of crumbly old Venice to the medieval flavor of Bassano del Grappa,
+                  and on to Belluno, a striking town that's a gateway for visiting the Dolomites, the Veneto makes a
+                  fascinating region to explore.</p>
                 <p>Veneto is one of the leading Italian regions in terms of quantity and quality production of grapes.
-                  The
-                  wines produced in this region are famous throughout the world: Prosecco, Amarone, Recioto, Soave,
+                  The wines produced in this region are famous throughout the world: Prosecco, Amarone, Recioto, Soave,
                   Valpolicella and Bardolino, are only a few of the names of wines known at international level.</p>
                 <p>Veneto is also the region that can count the highest number of DOCG areas in Italy.</p>
 
@@ -778,22 +741,13 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <h3 id="C.-Our-objective">C. Our objective<a class="anchor-link" href="#C.-Our-objective">&#182;</a>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="C.-Our-objective-">C. Our objective <a id="objective" /><a class="anchor-link"
+                    href="#C.-Our-objective-">&#182;</a></h3>
                 <p>Now that we are familiar with DOCG areas and the Veneto region we can define our objective.</p>
                 <p>There are many beautiful cities located within or in proximity of DOCG areas. These cities offer the
-                  most
-                  different kind of activities, venues and places of interest. If a person is interested in visiting the
-                  DOCG vineyards and stay in a city nearby, it would be great if they were able to choose a destination
-                  based on their preferred type of activities. That is the purpose of our project.</p>
+                  most different kind of activities, venues and places of interest. If a person is interested in
+                  visiting the DOCG vineyards and stay in a city nearby, it would be great if they were able to choose a
+                  destination based on their preferred type of activities. That is the purpose of our project.</p>
 
               </div>
             </div>
@@ -804,14 +758,6 @@
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
                 <h2 id="2.-Data-">2. Data <a id="data" /><a class="anchor-link" href="#2.-Data-">&#182;</a></h2>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
                 <p>The data used in this project has been made freely available by the Veneto region through it <a
                     href="https://idt2.regione.veneto.it/">geoportal</a>. There we can download the datasets and prepare
                   them for our analysis.</p>
@@ -824,24 +770,15 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <h3 id="A.-DOCG-geographical-areas-">A. DOCG geographical areas <a id="section21" /><a
-                    class="anchor-link" href="#A.-DOCG-geographical-areas-">&#182;</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
+                <h3 id="A.-DOCG-geographical-areas-">A. DOCG geographical areas <a id="data" /><a class="anchor-link"
+                    href="#A.-DOCG-geographical-areas-">&#182;</a></h3>
                 <p>The geographical information regading DOCG appellations area is contained in an <em>SHP</em> file.
                 </p>
                 <p>A SHP (shapefile) is a simple, nontopological format for storing the geometric location and attribute
                   information of geographic features. Geographic features in a shapefile can be represented by points,
                   lines, or polygons (areas). In Python, in order to access the shapefile we can use the
-                  <code>pyshp</code>
-                  library. We then need to convert the file to <em>geojson</em> format in order to utilise it with
-                  <code>folium</code> for our maps plotting.</p>
+                  <code>pyshp</code> library. We then need to convert the file to <em>geojson</em> format in order to
+                  utilise it with <code>folium</code> for our maps plotting.</p>
                 <p>After having created the dataset we can see the first 5 rows:</p>
 
               </div>
@@ -915,16 +852,7 @@
                   <li>zone: the zone type</li>
                   <li><b>coords</b>: a list of latitude and longitude coordinates</li>
                 </ul>
-
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <p>And here is the data plotted on a map.</p>
+                <p>And here is the DOCGs data plotted on a map.</p>
 
               </div>
             </div>
@@ -973,18 +901,9 @@
                 <h3 id="B.-Veneto-municipalities-geographical-areas-">B. Veneto municipalities geographical areas <a
                     id="comunes_data" /><a class="anchor-link"
                     href="#B.-Veneto-municipalities-geographical-areas-">&#182;</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <p>We managed to get ahold another <em>SHP</em> file containing the georaphical coordinates of every
-                  municipality in the Veneto region. After doing the same process as the previous shapefile we have
-                  stored
-                  the information in both a <code>DataFrame</code> and a geojson file.</p>
+                <p>We managed to get ahold of another <em>SHP</em> file containing the georaphical coordinates of every
+                  municipality in the Veneto region. As with the previous shapefile we can store the information in both
+                  a <code>DataFrame</code> and a geojson file.</p>
                 <p>This is how the data looks:</p>
 
               </div>
@@ -1082,9 +1001,8 @@
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
                 <p>We do not need to focus on any of the fields here besides <strong>NOMCOM</strong>, which is the name
-                  of
-                  the municipality, and the <strong>coords</strong> that we will need for plotting.</p>
-                <p>This is how the data looks on a map.</p>
+                  of the municipality, and the <strong>coords</strong> that we will need for plotting.</p>
+                <p>This is the comunes data plotted on a <code>folium</code> map.</p>
 
               </div>
             </div>
@@ -1130,7 +1048,7 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <p>This dataset will then be filtered to include only the cities relevant to our study.</p>
+                <p>This dataset will then need to be filtered to include only the cities relevant to our study.</p>
 
               </div>
             </div>
@@ -1142,18 +1060,9 @@
               <div class="text_cell_render border-box-sizing rendered_html">
                 <h3 id="C.-Touristic-cities-">C. Touristic cities <a id="touristic_data" /><a class="anchor-link"
                     href="#C.-Touristic-cities-">&#182;</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
                 <p>The data stored in a <em>csv</em> file contains information on the amount of tourists visiting each
-                  of
-                  Veneto's comunes in a given year. The data was collected from 2003 to 2013. Here we can see the last 5
-                  rows:</p>
+                  of Veneto's comunes in a given year. The data was collected from 2003 to 2013. Here we can see the
+                  last 5 rows:</p>
 
               </div>
             </div>
@@ -1228,10 +1137,8 @@
                   </li>
                 </ul>
                 <p>We selected the first 32 cities in proximity of DOCG areas by total number of tourists for our
-                  analysis.
-                  With the help of the Nominatim geolocator we managed to find the latitude and longitude coordinates of
-                  all
-                  city centers. The first five rows of our final dataset look like this:</p>
+                  analysis. With the help of the Nominatim geolocator we managed to find the latitude and longitude
+                  coordinates of all of the cities. The first five rows of our final dataset look like this:</p>
 
               </div>
             </div>
@@ -1290,7 +1197,8 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <p>Here is are the cities pinned on the map of the DOCG areas.</p>
+                <p>Here the selected cities are pinned to the map of the DOCG areas. You can hover on the tooltip to see
+                  the name of the comunes and those of the DOCG appellations.</p>
 
               </div>
             </div>
@@ -1339,19 +1247,11 @@
               <div class="text_cell_render border-box-sizing rendered_html">
                 <h3 id="D.-Foursquare-API-">D. Foursquare API <a id="foursquare_data" /><a class="anchor-link"
                     href="#D.-Foursquare-API-">&#182;</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
                 <p>We used the Foursquare API in order to find venues and places of interest in each of the locations.
                 </p>
                 <p>After leveraging the platform our final result is a dataset containg info about venues within these
-                  municipalities. A radius of 5km from each location was used in the search. We can have a look at some
-                  sample data .</p>
+                  municipalities. A radius of 5km from each location was used to perform the search. We can have a look
+                  again at the first five rows.</p>
 
               </div>
             </div>
@@ -1508,20 +1408,11 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <h2 id="3.-Methodology">3. Methodology<a id='methodology' /><a class="anchor-link" href="#3.-Methodology">&#182;</a></h2>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <p>This section represents the main component of our analysis. As a reminder our purpose is to recommend
-                  cities based on some common activities that can be done in those particular locations. As always we
-                  start
-                  with some exploratory data analysis. In particular, our first question is to see whether these
-                  municipalities have venue categories in common.</p>
+                <h2 id="3.-Methodology">3. Methodology<a class="anchor-link" href="#3.-Methodology">&#182;</a></h2>
+                <p>This section represents the main component of our analysis. As a reminder our purpose is to cluster
+                  similar cities based on some similar activities. As always we start with some exploratory data
+                  analysis. In particular, our first question is to see whether these municipalities have venue
+                  categories in common.</p>
                 <p>We can plot the top 5 categories for each of the comunes.</p>
 
               </div>
@@ -1542,29 +1433,23 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <p>It is definetly showing some similarities. In particular we can see that some areas have a more
-                  maritime
-                  kind of venue or activity, there are also some areas close to a major amusement park. We can see that
-                  food
-                  venues are also very popular in all of this locations.</p>
-                <p>We again need to perform some transformations to our data so that we are able to cluster the
+                <p>We can see some categories in common amongst some of the municipalities. For example the are places
+                  like Caorle or Cavallino-Treporti that have a more maritime related kind of venue, or activity. In
+                  another instance, Castelnuovo del garda and Peschiera del Garda both have theme park attraction as
+                  their main category. We can also see that venues like restaurant are very popular in all of this
+                  locations.</p>
+                <p>We need to perform some transformations to our data so that we are able to cluster the
                   municipalities. We will approach the clustering problem by implementing the <em>k-means</em>
-                  algorithm.
-                  <em>k-means</em> is a distance-based method that iteratively updates the location of k cluster
-                  centroids
-                  until convergence. The main user-defined "ingredients" of the <em>k-means</em> algorithm are the
-                  distance
-                  function (often Euclidean distance) and the number of clusters <em>k</em>. This parameter needs to be
-                  set
-                  according to the application or problem domain.</p>
+                  algorithm. <em>k-means</em> is a distance-based method that iteratively updates the location of k
+                  cluster centroids until convergence. The main user-defined "ingredients" of the <em>k-means</em>
+                  algorithm are the distance function (often Euclidean distance) and the number of clusters <em>k</em>.
+                  This parameter needs to be set according to the application or problem domain.</p>
                 <p>In a nutshell, <em>k-means</em> groups the data by minimizing the sum of squared distances between
-                  the
-                  data points and their respective closest centroid. It is particulary used in problems involving
-                  spatial
-                  data.</p>
-                <p>In Python we can use the <code>KMeans</code> class from scikit-learn. We analysed the inertias for
-                  different values of <em>k</em> and picked 5 as our hyperparameter. Here we can see a plot of inertia
-                  values for different values of <em>k</em>.</p>
+                  the data points and their respective closest centroid. It is particulary used in problems involving
+                  spatial data.</p>
+                <p>In Python we can use the <code>KMeans</code> class from scikit-learn. We then analysed the inertias
+                  for different values of <em>k</em> and picked 5 as our hyperparameter. Here we can see a plot of
+                  inertia values for different values of <em>k</em>.</p>
 
               </div>
             </div>
@@ -1584,8 +1469,7 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <p>After fitting our model we are then able to apply the clusters to the municipalities. Following are
-                  the
+                <p>After fitting our model we are able to apply the clusters to the municipalities. Following are the
                   first five rows of the municipalities with their assigned cluster.</p>
 
               </div>
@@ -1640,7 +1524,9 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <p>This concludes the methodology section. In the next section we will be checking our results.</p>
+                <p>The code for the data acquisition and creating the model can be found in the <a
+                    href="exploration.ipynb">exploration</a> notebook, which is part of this repo. We are now ready to
+                  check the results of our clustering.</p>
 
               </div>
             </div>
@@ -1652,20 +1538,8 @@
               <div class="text_cell_render border-box-sizing rendered_html">
                 <h2 id="4.-Results-">4. Results <a id="results" /><a class="anchor-link" href="#4.-Results-">&#182;</a>
                 </h2>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <p>All of our cities are now clustered into different groups. In order to recommend some particual group
-                  to
-                  a person wanting to visit the DOCG areas we will need to distinguish what the different clusters are
-                  and
-                  what are the discriminants that differentiate the classes.</p>
-                <p>As a first step we can visualize the different clusters.</p>
+                <p>All of our cities are now clustered into 5 different groups. As a first step we can visualize the
+                  different clusters.</p>
 
               </div>
             </div>
@@ -1712,8 +1586,12 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <p>Our next step is to analyse what the discriminants are and how the clusters were chosen. Here is a
-                  normalized table with the percentage of category of venue for each cluster.</p>
+                <p>Our next step is to see what the discriminants are to distinguishing these groups. This could be
+                  useful, for example, in recommending tourists wanting to visit the DOCG areas which cities to visit or
+                  stay at, based on particular activities they would like to do while staying at these locations. We
+                  will check how the clusters were chosen.</p>
+                <p>Grouping by cluster we can see a normalized table with the percentage of venue category for each of
+                  the clusters.</p>
 
               </div>
             </div>
@@ -1726,14 +1604,376 @@
                 <table border="1" class="dataframe">
                   <thead>
                     <tr style="text-align: right;">
-                      <th>cluster</th>
+                      <th></th>
                       <th>Accessories Store</th>
                       <th>Agriturismo</th>
                       <th>American Restaurant</th>
                       <th>Argentinian Restaurant</th>
                       <th>Art Gallery</th>
                       <th>Art Museum</th>
-                      <th>...</th>
+                      <th>Arts &amp; Crafts Store</th>
+                      <th>Asian Restaurant</th>
+                      <th>Athletics &amp; Sports</th>
+                      <th>BBQ Joint</th>
+                      <th>Bagel Shop</th>
+                      <th>Bakery</th>
+                      <th>Bar</th>
+                      <th>Basketball Court</th>
+                      <th>Basketball Stadium</th>
+                      <th>Bay</th>
+                      <th>Beach</th>
+                      <th>Beach Bar</th>
+                      <th>Bed &amp; Breakfast</th>
+                      <th>Beer Bar</th>
+                      <th>Beer Garden</th>
+                      <th>Bistro</th>
+                      <th>Board Shop</th>
+                      <th>Boarding House</th>
+                      <th>Bookstore</th>
+                      <th>Boutique</th>
+                      <th>Bowling Alley</th>
+                      <th>Brazilian Restaurant</th>
+                      <th>Breakfast Spot</th>
+                      <th>Brewery</th>
+                      <th>Bridge</th>
+                      <th>Buffet</th>
+                      <th>Burger Joint</th>
+                      <th>Cafeteria</th>
+                      <th>Café</th>
+                      <th>Campground</th>
+                      <th>Canal</th>
+                      <th>Castle</th>
+                      <th>Cheese Shop</th>
+                      <th>Chinese Restaurant</th>
+                      <th>Chocolate Shop</th>
+                      <th>Church</th>
+                      <th>City</th>
+                      <th>Clothing Store</th>
+                      <th>Cocktail Bar</th>
+                      <th>Coffee Shop</th>
+                      <th>Comfort Food Restaurant</th>
+                      <th>Concert Hall</th>
+                      <th>Coworking Space</th>
+                      <th>Creperie</th>
+                      <th>Cupcake Shop</th>
+                      <th>Deli / Bodega</th>
+                      <th>Department Store</th>
+                      <th>Dessert Shop</th>
+                      <th>Diner</th>
+                      <th>Discount Store</th>
+                      <th>Dive Bar</th>
+                      <th>Dive Spot</th>
+                      <th>Donut Shop</th>
+                      <th>Eastern European Restaurant</th>
+                      <th>Electronics Store</th>
+                      <th>Event Space</th>
+                      <th>Fast Food Restaurant</th>
+                      <th>Fish Market</th>
+                      <th>Flea Market</th>
+                      <th>Flower Shop</th>
+                      <th>Food</th>
+                      <th>Food &amp; Drink Shop</th>
+                      <th>Football Stadium</th>
+                      <th>Fried Chicken Joint</th>
+                      <th>Furniture / Home Store</th>
+                      <th>Gaming Cafe</th>
+                      <th>Garden</th>
+                      <th>Garden Center</th>
+                      <th>Gas Station</th>
+                      <th>Gastropub</th>
+                      <th>General Entertainment</th>
+                      <th>German Restaurant</th>
+                      <th>Golf Course</th>
+                      <th>Gourmet Shop</th>
+                      <th>Greek Restaurant</th>
+                      <th>Grocery Store</th>
+                      <th>Gym</th>
+                      <th>Gym / Fitness Center</th>
+                      <th>Gym Pool</th>
+                      <th>Harbor / Marina</th>
+                      <th>Hill</th>
+                      <th>Historic Site</th>
+                      <th>History Museum</th>
+                      <th>Hobby Shop</th>
+                      <th>Hockey Arena</th>
+                      <th>Hot Spring</th>
+                      <th>Hotel</th>
+                      <th>Hotel Bar</th>
+                      <th>Hotel Pool</th>
+                      <th>Ice Cream Shop</th>
+                      <th>Indian Restaurant</th>
+                      <th>Italian Restaurant</th>
+                      <th>Japanese Restaurant</th>
+                      <th>Kids Store</th>
+                      <th>Lake</th>
+                      <th>Lighthouse</th>
+                      <th>Liquor Store</th>
+                      <th>Lounge</th>
+                      <th>Market</th>
+                      <th>Mediterranean Restaurant</th>
+                      <th>Men's Store</th>
+                      <th>Mexican Restaurant</th>
+                      <th>Middle Eastern Restaurant</th>
+                      <th>Monument / Landmark</th>
+                      <th>Mountain</th>
+                      <th>Movie Theater</th>
+                      <th>Multiplex</th>
+                      <th>Museum</th>
+                      <th>Music Venue</th>
+                      <th>Neighborhood</th>
+                      <th>Nightclub</th>
+                      <th>Noodle House</th>
+                      <th>Nudist Beach</th>
+                      <th>Opera House</th>
+                      <th>Outdoors &amp; Recreation</th>
+                      <th>Outlet Store</th>
+                      <th>Park</th>
+                      <th>Pastry Shop</th>
+                      <th>Pedestrian Plaza</th>
+                      <th>Performing Arts Venue</th>
+                      <th>Pharmacy</th>
+                      <th>Piadineria</th>
+                      <th>Pizza Place</th>
+                      <th>Plaza</th>
+                      <th>Pool</th>
+                      <th>Pub</th>
+                      <th>Public Art</th>
+                      <th>Racetrack</th>
+                      <th>Record Shop</th>
+                      <th>Resort</th>
+                      <th>Rest Area</th>
+                      <th>Restaurant</th>
+                      <th>River</th>
+                      <th>Road</th>
+                      <th>Rock Club</th>
+                      <th>Sandwich Place</th>
+                      <th>Scenic Lookout</th>
+                      <th>Science Museum</th>
+                      <th>Sculpture Garden</th>
+                      <th>Seafood Restaurant</th>
+                      <th>Shoe Store</th>
+                      <th>Shop &amp; Service</th>
+                      <th>Shopping Mall</th>
+                      <th>Shopping Plaza</th>
+                      <th>Skating Rink</th>
+                      <th>Ski Area</th>
+                      <th>Snack Place</th>
+                      <th>Soccer Field</th>
+                      <th>Spa</th>
+                      <th>Sporting Goods Shop</th>
+                      <th>Stadium</th>
+                      <th>Steakhouse</th>
+                      <th>Supermarket</th>
+                      <th>Sushi Restaurant</th>
+                      <th>Tea Room</th>
+                      <th>Tennis Court</th>
+                      <th>Thai Restaurant</th>
+                      <th>Theater</th>
+                      <th>Theme Park</th>
+                      <th>Theme Park Ride / Attraction</th>
+                      <th>Toy / Game Store</th>
+                      <th>Trail</th>
+                      <th>Train Station</th>
+                      <th>Trattoria/Osteria</th>
+                      <th>University</th>
+                      <th>Used Bookstore</th>
+                      <th>Vacation Rental</th>
+                      <th>Vegetarian / Vegan Restaurant</th>
+                      <th>Veneto Restaurant</th>
+                      <th>Video Game Store</th>
+                      <th>Water Park</th>
+                      <th>Waterfront</th>
+                      <th>Wine Bar</th>
+                      <th>Wine Shop</th>
+                      <th>Winery</th>
+                      <th>Women's Store</th>
+                      <th>Zoo</th>
+                    </tr>
+                    <tr>
+                      <th>cluster</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -1745,7 +1985,183 @@
                       <td>0.01</td>
                       <td>0.01</td>
                       <td>0.01</td>
-                      <td>...</td>
+                      <td>NaN</td>
+                      <td>0.012463</td>
+                      <td>0.010000</td>
+                      <td>0.057844</td>
+                      <td>0.076923</td>
+                      <td>0.016616</td>
+                      <td>0.032521</td>
+                      <td>NaN</td>
+                      <td>0.025641</td>
+                      <td>NaN</td>
+                      <td>0.090000</td>
+                      <td>NaN</td>
+                      <td>0.014519</td>
+                      <td>0.012463</td>
+                      <td>0.012463</td>
+                      <td>0.010000</td>
+                      <td>0.01</td>
+                      <td>0.01</td>
+                      <td>0.013247</td>
+                      <td>0.051948</td>
+                      <td>0.011494</td>
+                      <td>0.033248</td>
+                      <td>0.014311</td>
+                      <td>0.030553</td>
+                      <td>0.015</td>
+                      <td>0.025641</td>
+                      <td>0.015633</td>
+                      <td>NaN</td>
+                      <td>0.079821</td>
+                      <td>0.013772</td>
+                      <td>NaN</td>
+                      <td>0.017195</td>
+                      <td>0.047619</td>
+                      <td>0.014563</td>
+                      <td>0.012987</td>
+                      <td>0.020</td>
+                      <td>0.025641</td>
+                      <td>0.034926</td>
+                      <td>0.035887</td>
+                      <td>0.014975</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.027035</td>
+                      <td>NaN</td>
+                      <td>0.034412</td>
+                      <td>0.019370</td>
+                      <td>0.023018</td>
+                      <td>0.019658</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.011494</td>
+                      <td>0.025466</td>
+                      <td>0.076923</td>
+                      <td>0.023901</td>
+                      <td>NaN</td>
+                      <td>0.02439</td>
+                      <td>0.01321</td>
+                      <td>0.034542</td>
+                      <td>0.016043</td>
+                      <td>NaN</td>
+                      <td>0.011494</td>
+                      <td>0.032484</td>
+                      <td>0.011494</td>
+                      <td>0.015</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.030445</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>0.017755</td>
+                      <td>0.014925</td>
+                      <td>0.011494</td>
+                      <td>0.016085</td>
+                      <td>0.027854</td>
+                      <td>0.018079</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>0.018772</td>
+                      <td>0.023810</td>
+                      <td>0.01</td>
+                      <td>0.071429</td>
+                      <td>NaN</td>
+                      <td>0.059223</td>
+                      <td>0.025974</td>
+                      <td>NaN</td>
+                      <td>0.026077</td>
+                      <td>0.01</td>
+                      <td>0.116428</td>
+                      <td>0.026454</td>
+                      <td>0.012821</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.014925</td>
+                      <td>0.020967</td>
+                      <td>0.01</td>
+                      <td>0.014925</td>
+                      <td>0.012987</td>
+                      <td>0.01641</td>
+                      <td>NaN</td>
+                      <td>0.02</td>
+                      <td>NaN</td>
+                      <td>0.017463</td>
+                      <td>0.01214</td>
+                      <td>0.01813</td>
+                      <td>0.01</td>
+                      <td>0.010000</td>
+                      <td>0.018430</td>
+                      <td>0.012637</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.090909</td>
+                      <td>0.018734</td>
+                      <td>0.018445</td>
+                      <td>0.01</td>
+                      <td>0.01</td>
+                      <td>0.012987</td>
+                      <td>0.01</td>
+                      <td>0.019658</td>
+                      <td>0.105097</td>
+                      <td>0.033375</td>
+                      <td>0.013136</td>
+                      <td>0.040340</td>
+                      <td>0.025641</td>
+                      <td>0.01</td>
+                      <td>0.01</td>
+                      <td>0.010000</td>
+                      <td>0.013455</td>
+                      <td>0.042192</td>
+                      <td>0.050455</td>
+                      <td>0.01094</td>
+                      <td>0.017544</td>
+                      <td>0.015705</td>
+                      <td>0.013772</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>0.041800</td>
+                      <td>0.015949</td>
+                      <td>0.012821</td>
+                      <td>0.017024</td>
+                      <td>0.012241</td>
+                      <td>0.01</td>
+                      <td>0.02381</td>
+                      <td>0.015705</td>
+                      <td>0.010498</td>
+                      <td>0.028063</td>
+                      <td>0.01593</td>
+                      <td>0.012821</td>
+                      <td>0.01527</td>
+                      <td>0.031048</td>
+                      <td>0.01112</td>
+                      <td>0.01</td>
+                      <td>0.017821</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>0.011494</td>
+                      <td>0.025641</td>
+                      <td>0.014925</td>
+                      <td>0.028810</td>
+                      <td>0.030773</td>
+                      <td>0.045753</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>0.017508</td>
+                      <td>0.014925</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.024114</td>
+                      <td>0.01</td>
+                      <td>0.014832</td>
+                      <td>0.012987</td>
+                      <td>0.011494</td>
                     </tr>
                     <tr>
                       <th>2</th>
@@ -1755,7 +2171,183 @@
                       <td>NaN</td>
                       <td>NaN</td>
                       <td>NaN</td>
-                      <td>...</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020833</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.031746</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.060516</td>
+                      <td>0.044643</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020833</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.015873</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.041667</td>
+                      <td>0.015873</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020833</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.041667</td>
+                      <td>0.052579</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.015873</td>
+                      <td>NaN</td>
+                      <td>0.149802</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020833</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.047123</td>
+                      <td>NaN</td>
+                      <td>0.015873</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020833</td>
+                      <td>0.026290</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.055060</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.018353</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.018353</td>
+                      <td>0.034226</td>
+                      <td>0.283234</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.047619</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.015873</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
                     </tr>
                     <tr>
                       <th>3</th>
@@ -1765,7 +2357,183 @@
                       <td>NaN</td>
                       <td>0.02</td>
                       <td>0.01</td>
-                      <td>...</td>
+                      <td>0.01</td>
+                      <td>0.012937</td>
+                      <td>0.033333</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.030000</td>
+                      <td>0.015000</td>
+                      <td>0.02</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>0.043478</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.02</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>0.020000</td>
+                      <td>NaN</td>
+                      <td>0.010</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.047572</td>
+                      <td>0.033333</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.017937</td>
+                      <td>0.010000</td>
+                      <td>0.020</td>
+                      <td>0.033333</td>
+                      <td>NaN</td>
+                      <td>0.023370</td>
+                      <td>0.020000</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.025000</td>
+                      <td>0.01</td>
+                      <td>0.010000</td>
+                      <td>0.021958</td>
+                      <td>0.045608</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.012937</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.015291</td>
+                      <td>0.015000</td>
+                      <td>0.02</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>0.015873</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.019735</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020000</td>
+                      <td>0.020000</td>
+                      <td>NaN</td>
+                      <td>0.046763</td>
+                      <td>NaN</td>
+                      <td>0.027937</td>
+                      <td>0.012937</td>
+                      <td>0.02</td>
+                      <td>NaN</td>
+                      <td>0.012937</td>
+                      <td>0.227050</td>
+                      <td>NaN</td>
+                      <td>0.038333</td>
+                      <td>0.029841</td>
+                      <td>NaN</td>
+                      <td>0.162131</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.01000</td>
+                      <td>NaN</td>
+                      <td>0.015873</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.015873</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.02500</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020873</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>0.012937</td>
+                      <td>NaN</td>
+                      <td>0.016468</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.103801</td>
+                      <td>0.080000</td>
+                      <td>0.010000</td>
+                      <td>0.025291</td>
+                      <td>0.020000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.030317</td>
+                      <td>NaN</td>
+                      <td>0.061739</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.012937</td>
+                      <td>0.010000</td>
+                      <td>0.030000</td>
+                      <td>0.012937</td>
+                      <td>0.01</td>
+                      <td>0.031739</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020000</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.015873</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.033333</td>
+                      <td>NaN</td>
+                      <td>0.028360</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>0.033333</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.018624</td>
+                      <td>0.02</td>
+                      <td>0.015000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
                     </tr>
                     <tr>
                       <th>4</th>
@@ -1775,7 +2543,183 @@
                       <td>NaN</td>
                       <td>NaN</td>
                       <td>NaN</td>
-                      <td>...</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.035208</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.035151</td>
+                      <td>0.013611</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>0.016022</td>
+                      <td>0.037037</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.037037</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>0.037037</td>
+                      <td>0.037636</td>
+                      <td>0.030814</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>0.037037</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.022045</td>
+                      <td>NaN</td>
+                      <td>0.025208</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.037037</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.037037</td>
+                      <td>NaN</td>
+                      <td>0.014419</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020000</td>
+                      <td>0.020000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.037037</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>0.016628</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.013611</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.020000</td>
+                      <td>0.125005</td>
+                      <td>NaN</td>
+                      <td>0.023256</td>
+                      <td>0.037469</td>
+                      <td>NaN</td>
+                      <td>0.338304</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.023256</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.02000</td>
+                      <td>NaN</td>
+                      <td>0.037037</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.054743</td>
+                      <td>0.010000</td>
+                      <td>0.010000</td>
+                      <td>0.020188</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>0.043709</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.016818</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.012708</td>
+                      <td>NaN</td>
+                      <td>0.010000</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.013611</td>
+                      <td>NaN</td>
+                      <td>0.016944</td>
+                      <td>0.010000</td>
+                      <td>NaN</td>
+                      <td>0.020818</td>
+                      <td>NaN</td>
+                      <td>0.038453</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.01</td>
+                      <td>NaN</td>
+                      <td>0.013333</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
                     </tr>
                     <tr>
                       <th>5</th>
@@ -1785,7 +2729,183 @@
                       <td>NaN</td>
                       <td>NaN</td>
                       <td>NaN</td>
-                      <td>...</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.031426</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.187273</td>
+                      <td>0.024695</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.025000</td>
+                      <td>0.024390</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.025000</td>
+                      <td>NaN</td>
+                      <td>0.036890</td>
+                      <td>0.153846</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.025000</td>
+                      <td>NaN</td>
+                      <td>0.025</td>
+                      <td>0.024390</td>
+                      <td>NaN</td>
+                      <td>0.031731</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.025000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.02439</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.02439</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.024390</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.024695</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.049390</td>
+                      <td>NaN</td>
+                      <td>0.176313</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.02439</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.025000</td>
+                      <td>NaN</td>
+                      <td>0.025</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.024390</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.070341</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.024695</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.069887</td>
+                      <td>NaN</td>
+                      <td>0.088462</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.024390</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.082958</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.024390</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.031426</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.025000</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>0.024695</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
+                      <td>NaN</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1797,37 +2917,36 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <p>With some further analysis we can differentiate the different clusters into 5 categories:</p>
+                <p>Based on the venue categories we can differentiate and define the different clusters as:</p>
                 <ul>
                   <li>
                     <h4><b>Cluster 1:</b></h4>
                     This cluster contains the following cities: Asiago, Bassano del Grappa, Bussolengo, Eraclea, Iesolo,
                     Mira, Mogliano Veneto, Noventa di Piave, Padova, San Giovanni Lupatoto, San Michele al Tagliamento,
-                    Treviso, Verona, Vicenza and Villafranca di Verona. It includes spas, river walks and cocktail bars.
+                    Treviso, Verona, Vicenza and Villafranca di Verona. It mainly includes venues or activities like
+                    spas, river walks and cocktail bars.
                   </li>
                   <li>
                     <h4><b>Cluster 2</b></h4>
-                    This cluster includes the cities of Castelnuovo del Garda and Peschiera del Garda. These locations
-                    are
-                    situated in the proximity of an amusement park.
+                    Is the smallest cluster and includes the cities of Castelnuovo del Garda and Peschiera del Garda.
+                    These locations are situated in the proximity of an amusement park and share theme park attractions
+                    in the proximity.
                   </li>
                   <li>
                     <h4><b>Cluster 3:</b></h4>
                     Venice, Abano Terme, Brenzone, Garda, Montegrotto Terme and Preganziol form our third cluster. This
-                    cluster offers plenty of hotels, a mixuture of gastonomic venues as well as some spas.
+                    cluster offers plenty of hotels and all sorts of gastronomic venues.
                   </li>
                   <li>
                     <h4><b>Cluster 4:</b></h4>
                     Is almost entirely made up of the towns in proximity of lake Garda. Bardolino, Costermano, Lazise,
                     Quarto d'Altino, San Zeno di Montagna and Torri del Benaco form this cluster. The majority of the
-                    venues
-                    are food and wine related.
+                    venues are wine and food related, with many restaurants and wine bars.
                   </li>
                   <li>
                     <h4><b>Cluster 5:</b></h4>
                     This includes the maritime areas situated on the gulf of Venice and offers beaches, seafood
-                    restaurants
-                    and resorts. These municipalities included are Caorle, Cavallino-Treporti and Chioggia.
+                    restaurants and resorts. These municipalities included are Caorle, Cavallino-Treporti and Chioggia.
                   </li>
                 </ul>
 
@@ -1841,23 +2960,10 @@
               <div class="text_cell_render border-box-sizing rendered_html">
                 <h2 id="5.-Discussion-">5. Discussion <a id="discussion" /><a class="anchor-link"
                     href="#5.-Discussion-">&#182;</a></h2>
-              </div>
-            </div>
-          </div>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <p>From what we have concluded in our results section we can propose different destinations based on the
-                  type of activities a person visiting the DOCG areas would like to do.</p>
-                <p>If the person is looking for a relaxing style of holiday our go to pick would be amongst cities in
-                  <strong>Cluster 1</strong>. If we were to travel with our family for example, we could pick a town in
-                  <strong>Cluster 2</strong>. For a more traditional city holiday we could choose between the cities in
-                  <strong>Cluster 3</strong>. For a gastronomic and wine tour any of the cities in <strong>CLuster
-                    4</strong> would be ideal. Last but not least if we are looking for a beach style of holiday we
-                  would
-                  pick any of the municipalities in <strong>Cluster 5</strong>.</p>
+                <p>We are able to propose different destinations, based on the type of activities, to a person visiting
+                  the DOCG areas.</p>
+                <p>We can ultimately summarize the different clusters into what they would be best suited for in the
+                  following table.</p>
 
               </div>
             </div>
@@ -1879,10 +2985,8 @@
                     <tr>
                       <td>1</td>
                       <td>Asiago, Bassano del Grappa, Bussolengo, Eraclea, Iesolo, Mira, Mogliano Veneto, Noventa di
-                        Piave,
-                        Padova, San Giovanni Lupatoto, San Michele al Tagliamento, Treviso, Verona, Vicenza, Villafranca
-                        di
-                        Verona</td>
+                        Piave, Padova, San Giovanni Lupatoto, San Michele al Tagliamento, Treviso, Verona, Vicenza,
+                        Villafranca di Verona</td>
                       <td>Relaxational destinations</td>
                     </tr>
                     <tr>
@@ -1903,7 +3007,7 @@
                     <tr>
                       <td>5</td>
                       <td>Caorle, Cavallino-Treporti, Chioggia</td>
-                      <td>Beach destinations</td>
+                      <td>Beach destination</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1915,9 +3019,9 @@
             </div>
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
-                <p>It is important to know that this classification is limited to the information retreived through the
-                  Foursquare API. The amount of venues taken into consideration is only a fraction of the actual amount.
-                </p>
+                <p>Finally, it is important to notice that this classification is limited to the information retreived
+                  through the Foursquare API. The amount of venues taken into consideration is only a fraction of the
+                  actual amount.</p>
 
               </div>
             </div>
@@ -1929,28 +3033,21 @@
               <div class="text_cell_render border-box-sizing rendered_html">
                 <h2 id="6.-Conclusion-">6. Conclusion <a id="conclusion" /><a class="anchor-link"
                     href="#6.-Conclusion-">&#182;</a></h2>
-                <p>This section concludes our exploration of cities located in proximity of DOCG areas and our project.
+                <p>We analysed some beautiful cities located in the proximity of DOCG areas and are able to pick a
+                  destination, based on our preferred activities, for our holiday. It is now up to you to decide which
+                  location suits you best in order to visit those wonderful areas made of outstanding wines and food.
                 </p>
-                <p>We are now able to recommend locations based on selected type of activities. It is now up to you to
-                  decide what kind of holidays you would enjoy and deep in those wonderful areas made of outstanding
-                  wines
-                  and food.</p>
-                <p>The code and all the assets can be found at this <a
-                    href="https://github.com/themien/Veneto_DOCG">link</a>. The repo includes all the files used in this
-                  project, you can reproduce the problem and find some insights yourself.</p>
-                <p>If you have any questions do not esitate to contact me for further discussionor, even if you simply
-                  liked
-                  this project .</p>
-                <p>Hope you enjoyed this journey in the land of wines.</p>
+                <p>I hope you enjoyed this journey in the land of wines. You can fin the code and all the assets by
+                  following this <a href="https://github.com/themien/Veneto_DOCG">link</a>. The repo includes all of the
+                  files used in this project, including the datasets with the geographical data.</p>
+                <p>If you are not able to view the maps on github you ca read the notebook following this <a
+                    href="https://themien.github.io/docgs_veneto.html">link</a>.</p>
 
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </article>
-
 </body>
 
 
