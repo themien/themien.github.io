@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>bodycare_case_study</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.css" rel="stylesheet">
+
+  <style type="text/css">
+    .highlight .hll {
+      background-color: #ffffcc
+    }
+
+    .highlight {
+      background: #f8f8f8;
+    }
+
+    .highlight .c {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment */
+    .highlight .err {
+      border: 1px solid #FF0000
+    }
+
+    /* Error */
+    .highlight .k {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword */
+    .highlight .o {
+      color: #666666
+    }
+
+    /* Operator */
+    .highlight .ch {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.Hashbang */
+    .highlight .cm {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.Multiline */
+    .highlight .cp {
+      color: #BC7A00
+    }
+
+    /* Comment.Preproc */
+    .highlight .cpf {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.PreprocFile */
+    .highlight .c1 {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.Single */
+    .highlight .cs {
+      color: #408080;
+      font-style: italic
+    }
+
+    /* Comment.Special */
+    .highlight .gd {
+      color: #A00000
+    }
+
+    /* Generic.Deleted */
+    .highlight .ge {
+      font-style: italic
+    }
+
+    /* Generic.Emph */
+    .highlight .gr {
+      color: #FF0000
+    }
+
+    /* Generic.Error */
+    .highlight .gh {
+      color: #000080;
+      font-weight: bold
+    }
+
+    /* Generic.Heading */
+    .highlight .gi {
+      color: #00A000
+    }
+
+    /* Generic.Inserted */
+    .highlight .go {
+      color: #888888
+    }
+
+    /* Generic.Output */
+    .highlight .gp {
+      color: #000080;
+      font-weight: bold
+    }
+
+    /* Generic.Prompt */
+    .highlight .gs {
+      font-weight: bold
+    }
+
+    /* Generic.Strong */
+    .highlight .gu {
+      color: #800080;
+      font-weight: bold
+    }
+
+    /* Generic.Subheading */
+    .highlight .gt {
+      color: #0044DD
+    }
+
+    /* Generic.Traceback */
+    .highlight .kc {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword.Constant */
+    .highlight .kd {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword.Declaration */
+    .highlight .kn {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword.Namespace */
+    .highlight .kp {
+      color: #008000
+    }
+
+    /* Keyword.Pseudo */
+    .highlight .kr {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Keyword.Reserved */
+    .highlight .kt {
+      color: #B00040
+    }
+
+    /* Keyword.Type */
+    .highlight .m {
+      color: #666666
+    }
+
+    /* Literal.Number */
+    .highlight .s {
+      color: #BA2121
+    }
+
+    /* Literal.String */
+    .highlight .na {
+      color: #7D9029
+    }
+
+    /* Name.Attribute */
+    .highlight .nb {
+      color: #008000
+    }
+
+    /* Name.Builtin */
+    .highlight .nc {
+      color: #0000FF;
+      font-weight: bold
+    }
+
+    /* Name.Class */
+    .highlight .no {
+      color: #880000
+    }
+
+    /* Name.Constant */
+    .highlight .nd {
+      color: #AA22FF
+    }
+
+    /* Name.Decorator */
+    .highlight .ni {
+      color: #999999;
+      font-weight: bold
+    }
+
+    /* Name.Entity */
+    .highlight .ne {
+      color: #D2413A;
+      font-weight: bold
+    }
+
+    /* Name.Exception */
+    .highlight .nf {
+      color: #0000FF
+    }
+
+    /* Name.Function */
+    .highlight .nl {
+      color: #A0A000
+    }
+
+    /* Name.Label */
+    .highlight .nn {
+      color: #0000FF;
+      font-weight: bold
+    }
+
+    /* Name.Namespace */
+    .highlight .nt {
+      color: #008000;
+      font-weight: bold
+    }
+
+    /* Name.Tag */
+    .highlight .nv {
+      color: #19177C
+    }
+
+    /* Name.Variable */
+    .highlight .ow {
+      color: #AA22FF;
+      font-weight: bold
+    }
+
+    /* Operator.Word */
+    .highlight .w {
+      color: #bbbbbb
+    }
+
+    /* Text.Whitespace */
+    .highlight .mb {
+      color: #666666
+    }
+
+    /* Literal.Number.Bin */
+    .highlight .mf {
+      color: #666666
+    }
+
+    /* Literal.Number.Float */
+    .highlight .mh {
+      color: #666666
+    }
+
+    /* Literal.Number.Hex */
+    .highlight .mi {
+      color: #666666
+    }
+
+    /* Literal.Number.Integer */
+    .highlight .mo {
+      color: #666666
+    }
+
+    /* Literal.Number.Oct */
+    .highlight .sa {
+      color: #BA2121
+    }
+
+    /* Literal.String.Affix */
+    .highlight .sb {
+      color: #BA2121
+    }
+
+    /* Literal.String.Backtick */
+    .highlight .sc {
+      color: #BA2121
+    }
+
+    /* Literal.String.Char */
+    .highlight .dl {
+      color: #BA2121
+    }
+
+    /* Literal.String.Delimiter */
+    .highlight .sd {
+      color: #BA2121;
+      font-style: italic
+    }
+
+    /* Literal.String.Doc */
+    .highlight .s2 {
+      color: #BA2121
+    }
+
+    /* Literal.String.Double */
+    .highlight .se {
+      color: #BB6622;
+      font-weight: bold
+    }
+
+    /* Literal.String.Escape */
+    .highlight .sh {
+      color: #BA2121
+    }
+
+    /* Literal.String.Heredoc */
+    .highlight .si {
+      color: #BB6688;
+      font-weight: bold
+    }
+
+    /* Literal.String.Interpol */
+    .highlight .sx {
+      color: #008000
+    }
+
+    /* Literal.String.Other */
+    .highlight .sr {
+      color: #BB6688
+    }
+
+    /* Literal.String.Regex */
+    .highlight .s1 {
+      color: #BA2121
+    }
+
+    /* Literal.String.Single */
+    .highlight .ss {
+      color: #19177C
+    }
+
+    /* Literal.String.Symbol */
+    .highlight .bp {
+      color: #008000
+    }
+
+    /* Name.Builtin.Pseudo */
+    .highlight .fm {
+      color: #0000FF
+    }
+
+    /* Name.Function.Magic */
+    .highlight .vc {
+      color: #19177C
+    }
+
+    /* Name.Variable.Class */
+    .highlight .vg {
+      color: #19177C
+    }
+
+    /* Name.Variable.Global */
+    .highlight .vi {
+      color: #19177C
+    }
+
+    /* Name.Variable.Instance */
+    .highlight .vm {
+      color: #19177C
+    }
+
+    /* Name.Variable.Magic */
+    .highlight .il {
+      color: #666666
+    }
+
+    /* Literal.Number.Integer.Long */
+  </style>
+  <style type="text/css">
+    /* Temporary definitions which will become obsolete with Notebook release 5.0 */
+    .ansi-black-fg {
+      color: #3E424D;
+    }
+
+    .ansi-black-bg {
+      background-color: #3E424D;
+    }
+
+    .ansi-black-intense-fg {
+      color: #282C36;
+    }
+
+    .ansi-black-intense-bg {
+      background-color: #282C36;
+    }
+
+    .ansi-red-fg {
+      color: #E75C58;
+    }
+
+    .ansi-red-bg {
+      background-color: #E75C58;
+    }
+
+    .ansi-red-intense-fg {
+      color: #B22B31;
+    }
+
+    .ansi-red-intense-bg {
+      background-color: #B22B31;
+    }
+
+    .ansi-green-fg {
+      color: #00A250;
+    }
+
+    .ansi-green-bg {
+      background-color: #00A250;
+    }
+
+    .ansi-green-intense-fg {
+      color: #007427;
+    }
+
+    .ansi-green-intense-bg {
+      background-color: #007427;
+    }
+
+    .ansi-yellow-fg {
+      color: #DDB62B;
+    }
+
+    .ansi-yellow-bg {
+      background-color: #DDB62B;
+    }
+
+    .ansi-yellow-intense-fg {
+      color: #B27D12;
+    }
+
+    .ansi-yellow-intense-bg {
+      background-color: #B27D12;
+    }
+
+    .ansi-blue-fg {
+      color: #208FFB;
+    }
+
+    .ansi-blue-bg {
+      background-color: #208FFB;
+    }
+
+    .ansi-blue-intense-fg {
+      color: #0065CA;
+    }
+
+    .ansi-blue-intense-bg {
+      background-color: #0065CA;
+    }
+
+    .ansi-magenta-fg {
+      color: #D160C4;
+    }
+
+    .ansi-magenta-bg {
+      background-color: #D160C4;
+    }
+
+    .ansi-magenta-intense-fg {
+      color: #A03196;
+    }
+
+    .ansi-magenta-intense-bg {
+      background-color: #A03196;
+    }
+
+    .ansi-cyan-fg {
+      color: #60C6C8;
+    }
+
+    .ansi-cyan-bg {
+      background-color: #60C6C8;
+    }
+
+    .ansi-cyan-intense-fg {
+      color: #258F8F;
+    }
+
+    .ansi-cyan-intense-bg {
+      background-color: #258F8F;
+    }
+
+    .ansi-white-fg {
+      color: #C5C1B4;
+    }
+
+    .ansi-white-bg {
+      background-color: #C5C1B4;
+    }
+
+    .ansi-white-intense-fg {
+      color: #A1A6B2;
+    }
+
+    .ansi-white-intense-bg {
+      background-color: #A1A6B2;
+    }
+
+    .ansi-bold {
+      font-weight: bold;
+    }
+  </style>
+
+
+  <style type="text/css">
+    /* Overrides of notebook CSS for static HTML export */
+    body {
+      overflow: visible;
+      /* padding: 8px; */
+    }
+
+    div#notebook {
+      overflow: visible;
+      border-top: none;
+    }
+
+    @media print {
+      div.cell {
+        display: block;
+        page-break-inside: avoid;
+      }
+
+      div.output_wrapper {
+        display: block;
+        page-break-inside: avoid;
+      }
+
+      div.output {
+        display: block;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+
+  <!-- Loading mathjax macro -->
+  <!-- Load mathjax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+  <!-- MathJax configuration -->
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true,
+              processEnvironments: true
+          },
+          // Center justify equations in code and markdown cells. Elsewhere
+          // we use CSS to left justify single line equations in code cells.
+          displayAlign: 'center',
+          "HTML-CSS": {
+              styles: {'.MathJax_Display': {"margin": 0}},
+              linebreaks: { automatic: true }
+          }
+      });
+      </script>
+  <!-- End of mathjax configuration -->
+</head>
+
+<body>
+
+  <!-- Navigation
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post.html">Sample Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/bodycare_bk.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Database design and implementation</h1>
+            <h2 class="subheading">BodyCare Case Study</h2>
+            <span class="meta">Posted on December 10, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+
+          <!-- Start of notebook output-->
+          <h2 id="1.-Introduction-">1. Introduction <a id="introduction" /><a class="anchor-link"
+              href="#1.-Introduction-">&#182;</a></h2>
+          <p>In this project we will revise some of the key concepts in data modelling and database architecture. The topics
+            covered include relational database modelling, Entity Relationship diagrams for the conceptual and logical designs of
+            a database, the SQL language and its use for creating, reading, updating, deleting (CRUDE) information to and from a
+            database.</p>
+<p>Our case study is based on BodyCare Ltd (BCL), a company that specialises in supplying beauty and fragrance boxed gift sets in the UK. We will have to carefully analyse BCL's requirements for the design of a conceptual model and in the mapping process to create a logical model for the database application.</p>
+<p>At the end of this case study we will have:</p>
+<ul>
+<li>Designed a data model which conceptually captures the key architecture of a database;</li>
+<li>Revised the conceptual data model and mapped it into a logical diagram ready to be implemented;</li>
+<li>Used the SQL language for basic database implementation;</li>
+</ul>
+<p><strong>TABLE OF CONTENTS</strong></p>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#guidelines">Case study guidelines</a></li>
+<li><a href="#erd">Entity Relationship Diagram</a></li>
+<li><a href="#keys">Primary and foreign keys</a></li>
+<li><a href="#assumptions">Relationships assumptions</a></li>
+<li><a href="#tables">SQL tables creation</a></li>
+<li><a href="#insdata">Inserting sample data</a></li>
+<li><a href="#queries">Sample queries</a></li>
+</ol>
+<p></p>
+<h2 id="2.-Case-study-guidelines-">2. Case study guidelines <a id="guidelines" /><a class="anchor-link" href="#2.-Case-study-guidelines-">&#182;</a></h2><p>Following are the guidelines provided for this scope:</p>
+<blockquote><p>BodyCare Ltd (BCL) specialises in supplying quality beauty &amp; fragrance boxed gift sets for men and women in the UK. Its reputation for using only the best products has resulted in rapid expansion in sales over the last three years.</p>
+<p>Skin care sets, make-up sets, fragrance sets, hair care sets, etc. are sourced from several suppliers who deliver goods to BCL’s warehouse in Uxbridge where the sets are assembled to order by a staff of 10. A standard range of around 50 sets is offered, but every so often a new set is produced for a special occasion. The marketing department is always on the lookout for new ideas and business opportunities. The company also has a policy of donating 2% of its annual total sales value to local charities.</p>
+<p>Each product making up a set is supplied by a single supplier and is given a unique product number and description by BCL. Products are always sold as part of a set, never on their own. A minimum stock level is recorded for each product and as soon as the stock falls below this, a purchase order is raised to replenish stock.</p>
+<p>The sets are sold via a team of salesmen who are paid a nominal salary with the opportunity to increase their earnings from commissions on sales. Commission is paid at 10% of the value of a set, but then goes up to 20% after a salesman’s annual sales target is reached.</p>
+<p>The full list of sets offered is contained in the company’s catalogue. Prices range from the ‘Deluxe Recreation’ priced at £650 to the more affordable ‘Regular Care’ set priced at £25.99. Each set has an imaginative description to entice customers to part with their money. The bulk of BCL customers are corporate clients who buy the gift sets as presents for their employees and clients. There is also good demand from young professionals who just fancy splashing out from time to time. The business is enjoying rapid growth and the current system of recording everything on Excel Spreadsheets is proving time consuming and leading to errors.</p>
+<p>The owners are thinking of setting up an integrated sales order processing system but would like to do it in stages. The first stage will be a Customer Order Processing system as a ‘proof of concept’. This will enable the company to keep a record of customer details and sales for promotional purposes as well as to identify ‘high spenders’. 
+If that proves successful than the supplier side too will be added later on. Payments are handled through PayPal due to security and fraud concerns and no changes are planned here.</p>
+</blockquote>
+<p>The guidelines offered are not 100% clear. In a real-life scenario we should communicate with the relevant stakeholders to fully understand the needs and the use cases of the newly to be implemented system. Communication is the key to any successful project development, because it is a process of transmitting ideas and information.</p>
+<p></p>
+<h4 id="Tasks-details">Tasks details<a class="anchor-link" href="#Tasks-details">&#182;</a></h4><ul>
+<li>We are required to produce an Entity Relationship Diagram using UML notation.</li>
+<li>The ERD should represent customer order processing only.</li>
+<li>For each of the entities in our model, we should clearly identify appropriate attributes and relevant keys.</li>
+<li>Relationships between entities should be clearly identified and labelled with any assumptions fully documented.</li>
+<li>We are also required to implement our design as a relational database using MySQL database by creating appropriate SQL scripts and executing them.</li>
+<li>We should populate our tables with sufficient data to demonstrate execution of four relevant and useful queries.</li>
+</ul>
+<p>Let's go!</p>
+<p></p>
+<h2 id="3.-Entity-Relationship-Diagram-">3. Entity Relationship Diagram <a id="erd" /><a class="anchor-link" href="#3.-Entity-Relationship-Diagram-">&#182;</a></h2><p>We have identified five key entities: <strong>Agent</strong>, <strong>Customer</strong>, <strong>Giftset</strong>, <strong>Sale</strong> and <strong>Product</strong>. It is important to notice that the  ERD should represents customer order processing only. The Agent entity in not necessary in the context of this case study, although it would give off a better starting point in the case of an actual implementation of the database. Furthermore, it will be used at a later stage for the purpose of calculating commission on sales.</p>
+<figure>
+  <img src="img/bodycare/erd.png" width="600px" />
+  <figcaption>Fig. 1 - Customer order processing ERD</figcaption>
+</figure><p>In order to resolve the many to many relationships we have created the <strong>Sale_Detail</strong> and <strong>Gifteset_Product</strong> entities. We have also included what would be the attributes for a basic build.</p>
+<p>The diagram has been designed with <a href="https://diagrams.net">diagrams.net</a>, an open source technology stack for building diagramming applications.</p>
+<p></p>
+<h2 id="4.-Primary-and-Foreign-keys">4. Primary and Foreign keys<a id="erd" /><a class="anchor-link" href="#4.-Primary-and-Foreign-keys">&#182;</a></h2><p>We can refer to the table below for the relevant keys identified in each of the entities in the model.</p>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+  <table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th>Entity</th>
+      <th>Primary Key</th>
+      <th>Foreign Key</th>
+      <th>Rationale for Primary Key</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Agent</th>
+      <td>agentId</td>
+      <td>N/A</td>
+      <td>agentId is unique to each Agent.</td>
+    </tr>
+    <tr>
+      <th>Customer</th>
+      <td>custId</td>
+      <td>agentId</td>
+      <td>custId is uniquely assigned to a Customer.</td>
+    </tr>
+    <tr>
+      <th>Sale</th>
+      <td>saleRefNo</td>
+      <td>custId</td>
+      <td>saleRefNo is a unique identifier for each Sale. PayPalTransId is a possible alternative but it is dependent on another service.</td>
+    </tr>
+    <tr>
+      <th>Giftset</th>
+      <td>gsetId</td>
+      <td>N/A</td>
+      <td>gsetId is unique for every Giftset. gsetName is also unique but could have issues scaling up.</td>
+    </tr>
+    <tr>
+      <th>Product</th>
+      <td>prodNo</td>
+      <td>N/A</td>
+      <td>prodNo is unique to each Product.</td>
+    </tr>
+    <tr>
+      <th>Sale_Detail</th>
+      <td>saleRefNo, gsetId</td>
+      <td>saleRefNo, gsetId</td>
+      <td>Sale_Detail is a link entity; a minimum PK is a composite key made up of parent PKs as well as being FKs.</td>
+    </tr>
+    <tr>
+      <th>Giftset_Product</th>
+      <td>gsetId, prodNo</td>
+      <td>gsetId, prodNo</td>
+      <td>Giftset_Product is a link entity; a minimum PK is a composite key made up of parent PKs as well as being FKs.</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+<p></p>
+</div><h2 id="5.-Relationships-assumptions">5. Relationships assumptions<a id="assumptions" /><a class="anchor-link" href="#5.-Relationships-assumptions">&#182;</a></h2><p>One last step before moving on to the SQL implementation will be to outline the assumptions made, in terms of participation and multiplicity, between our entities:</p>
+<ul>
+<p></p>
+<li><h6>Agent - Customer</h6>
+One agent can represent no customer. In the case of a newly hired agent or in the case of a temporarily leave there could be no customers represented by the agent.
+One agent can represent many customers. It is not feasible to have one agent represent only one customer.
+One customer can have no agent representing them. It could be that the customer has made an order through the online shop, in that case no agent is involved.
+One customer must be represented by at most one agent. It is company policy that a customer must not have more than one agent representing them, this has to do with how commission is applied.</li>
+<li><h6>Customer - Sale</h6>
+One customer could not make a sale. It could be that the customer has registered on the online shop but has not made a sale yet.
+One customer can make many sales. It would not be a profitable business model if each customer were allowed at most one sale.
+A sale needs to be made by at least one customer. If a sale is not made by a customer there would be no sale to begin with.
+A sale must be made by at most one customer. It is company policy that a sale can be made by one and only one customer to avoid any sorts of issues that may arise.</li>
+<li><h6>Sale - Giftset</h6>
+One sale must contain at least one giftset. In the case of a sale containing no giftsets there would be no sale.
+One sale can have many giftsets. It is possible and encouraged by BodyCare Ltd. to have more giftsets ordered for the same sale, this is to reduce delivery costs and simplify the logistics.
+One giftset could be in no sale. It could be that a giftset has not been ordered in any sale yet, for example in the case of a brand-new giftset.
+One giftset could be included in many sales. A particular type of giftset could be ordered by different customers.
+Sale_Detail is the link entity used to resolve this many to many relationship.</li>
+<li><h6>Giftset - Product</h6>
+One giftset needs to contain at least one product. Products are not sold stand alone but only as part of a giftset.
+One giftset could contain many products. A giftset is by definition a set of products packaged together for individual sale.
+One product could not be part of a giftset. It could be that the product has not been made part of a giftset yet, for example in the case of a new product.
+One product can make up many giftset. The business operates so that products are included in the same type of giftset and the same product could also be shared by different giftsets.
+Giftset_Product is the link entity used to resolve this many to many relationship.</li>
+</ul>
+<p></p>
+<h2 id="6.-SQL-Tables-creation">6. SQL Tables creation<a id="tables" /><a class="anchor-link" href="#6.-SQL-Tables-creation">&#182;</a></h2><p>Let' now see the SQL scripts used for the creation on the relational Database. I used phpMyAdmin, a free and open source administration tool for MySQL and MariaDB, running in a Docker container. The official image can be found <a href="https://hub.docker.com/r/phpmyadmin/phpmyadmin/">here</a>.</p>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">Agent</span> 
+<span class="p">(</span>
+  <span class="n">agentId</span>           <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span>
+  <span class="n">agentFullName</span>     <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">agentSalary</span>       <span class="kt">DECIMAL</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span> 
+  <span class="n">agentCommission</span>   <span class="kt">DECIMAL</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+  <span class="n">annualSalesTarget</span> <span class="kt">DECIMAL</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="k">CONSTRAINT</span> <span class="n">a_ano_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">agentId</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/table_agent.png" width="450px" />
+  <figcaption>Fig. 2 - Agent table structure on phpMyAdmin</figcaption>
+</figure>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">Customer</span>
+<span class="p">(</span> 
+  <span class="n">custId</span>            <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+  <span class="n">custFullName</span>      <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">custTelNo</span>         <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+  <span class="n">custEmail</span>         <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">UNIQUE</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">custAddress</span>       <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>    
+  <span class="n">custPostCode</span>      <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">custCity</span>          <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">agentId</span>           <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="n">c_cid_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">custId</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="n">c_aid_fk</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">agentId</span><span class="p">)</span>
+  <span class="k">REFERENCES</span> <span class="n">Agent</span> <span class="p">(</span><span class="n">agentId</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/table_customer.png" width="400px" />
+  <figcaption>Fig. 3 - Customer table structure on phpMyAdmin</figcaption>
+</figure>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">Sale</span>
+<span class="p">(</span>
+  <span class="n">saleRefNo</span>         <span class="kt">INTEGER</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span> 
+  <span class="n">saleDate</span>          <span class="kt">DATE</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">saleTotal</span>         <span class="kt">DECIMAL</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span> 
+  <span class="n">deliveryDate</span>      <span class="kt">DATE</span><span class="p">,</span>
+  <span class="n">PayPalTransId</span>     <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">custId</span>            <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="k">CONSTRAINT</span> <span class="n">s_srno_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">saleRefNo</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="n">s_cid_fk</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">custId</span><span class="p">)</span>
+  <span class="k">REFERENCES</span> <span class="n">Customer</span> <span class="p">(</span><span class="n">custId</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/table_sale.png" width="420px" />
+  <figcaption>Fig. 4 - Sale table structure on phpMyAdmin</figcaption>
+</figure>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">Giftset</span>
+<span class="p">(</span>
+  <span class="n">gsetId</span>            <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+  <span class="n">gsetName</span>          <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">UNIQUE</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">gsetPrice</span>         <span class="kt">DECIMAL</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">gsetDesc</span>          <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">isLimited</span>         <span class="kt">BOOLEAN</span><span class="p">,</span>
+  <span class="k">CONSTRAINT</span> <span class="n">gs_gsid_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">gsetId</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/table_giftset.png" width="450px" />
+  <figcaption>Fig. 5 - Gifset table structure on phpMyAdmin</figcaption>
+</figure>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">Product</span>
+<span class="p">(</span>
+  <span class="n">prodNo</span>            <span class="kt">INTEGER</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>    
+  <span class="n">prodName</span>          <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">prodUnitPrice</span>     <span class="kt">DECIMAL</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>     
+  <span class="n">prodStockLevel</span>    <span class="kt">INTEGER</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+  <span class="n">prodDesc</span>          <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">500</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="n">p_pno_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">prodNo</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/table_product.png" width="450px" />
+  <figcaption>Fig. 6 - Product table structure on phpMyAdmin</figcaption>
+</figure>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">Giftset_Product</span>
+<span class="p">(</span>
+  <span class="n">gsetId</span>            <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">prodNo</span>            <span class="kt">INTEGER</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">prodQuantity</span>      <span class="kt">INTEGER</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="k">CONSTRAINT</span> <span class="n">gsp_gsidpno_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">gsetId</span><span class="p">,</span> <span class="n">prodNo</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="n">gsp_gsid_fk</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">gsetId</span><span class="p">)</span>
+  <span class="k">REFERENCES</span> <span class="n">Giftset</span> <span class="p">(</span><span class="n">gsetId</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="n">gsp_pno_fk</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">prodNo</span><span class="p">)</span>
+  <span class="k">REFERENCES</span> <span class="n">Product</span> <span class="p">(</span><span class="n">prodNo</span><span class="p">)</span>  
+<span class="p">);</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/table_giftset_product.png" width="450px" />
+  <figcaption>Fig. 7 - Giftset_Product table structure on phpMyAdmin</figcaption>
+</figure>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">Sale_Detail</span>
+<span class="p">(</span>
+  <span class="n">saleRefNo</span>         <span class="kt">INTEGER</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span> 
+  <span class="n">gsetId</span>            <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="n">gsetQuantity</span>      <span class="kt">INTEGER</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+  <span class="k">CONSTRAINT</span> <span class="n">sd_srnogsid_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">saleRefNo</span><span class="p">,</span> <span class="n">gsetId</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="n">sd_srno_fk</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">saleRefNo</span><span class="p">)</span>
+  <span class="k">REFERENCES</span> <span class="n">Sale</span> <span class="p">(</span><span class="n">saleRefNo</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="n">sd_gsid_fk</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">gsetId</span><span class="p">)</span>
+  <span class="k">REFERENCES</span> <span class="n">Giftset</span> <span class="p">(</span><span class="n">gsetId</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/table_sale_detail.png" width="450px" />
+  <figcaption>Fig. 8 - Sale_Detail table structure on phpMyAdmin</figcaption>
+</figure><p>Our tables are ready to be tested, we will need to populate them with some sample data and then we will be able to try some queries out.</p>
+<p></p>
+<h2 id="7.-Inserting-sample-data">7. Inserting sample data<a id="insdata" /><a class="anchor-link" href="#7.-Inserting-sample-data">&#182;</a></h2><p>Following is the sample data used in the implementation of this model. Some data has been randomly genarated while some was scraped off different retail websites.</p>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Agent</span> 
+  <span class="p">(</span><span class="n">agentId</span><span class="p">,</span> <span class="n">agentFullName</span><span class="p">,</span> <span class="n">agentSalary</span><span class="p">,</span> <span class="n">agentCommission</span><span class="p">,</span> <span class="n">annualSalesTarget</span><span class="p">)</span> 
+<span class="k">VALUES</span>
+  <span class="p">(</span><span class="s1">&#39;A034&#39;</span><span class="p">,</span> <span class="s1">&#39;Anton Gutierrez&#39;</span><span class="p">,</span> <span class="mf">22500.00</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1000.00</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">&#39;R133&#39;</span><span class="p">,</span> <span class="s1">&#39;Reginald Sadler&#39;</span><span class="p">,</span> <span class="mf">35000.00</span><span class="p">,</span> <span class="mf">2100.32</span><span class="p">,</span> <span class="mf">2000.00</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">&#39;Y011&#39;</span><span class="p">,</span> <span class="s1">&#39;Yaqub Moreno&#39;</span><span class="p">,</span> <span class="mf">22500.77</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1000.00</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">&#39;D057&#39;</span><span class="p">,</span> <span class="s1">&#39;Derrick Blackmore&#39;</span><span class="p">,</span> <span class="mf">25000.00</span><span class="p">,</span> <span class="mf">132.71</span><span class="p">,</span> <span class="mf">10000.00</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">&#39;G101&#39;</span><span class="p">,</span> <span class="s1">&#39;Gordon Velazquez&#39;</span><span class="p">,</span> <span class="mf">33650.00</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1800.00</span><span class="p">);</span>
+</pre></div>
+<p></p>
+<details>    
+    <summary>Click here to see the rest of the INSERT statements</summary>
+
+    <div class="highlight"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Agent</span> 
+      <span class="p">(</span><span class="n">agentId</span><span class="p">,</span> <span class="n">agentFullName</span><span class="p">,</span> <span class="n">agentSalary</span><span class="p">,</span> <span class="n">agentCommission</span><span class="p">,</span> <span class="n">annualSalesTarget</span><span class="p">)</span> 
+    <span class="k">VALUES</span>
+      <span class="p">(</span><span class="s1">&#39;A034&#39;</span><span class="p">,</span> <span class="s1">&#39;Anton Gutierrez&#39;</span><span class="p">,</span> <span class="mf">22500.00</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1000.00</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;R133&#39;</span><span class="p">,</span> <span class="s1">&#39;Reginald Sadler&#39;</span><span class="p">,</span> <span class="mf">35000.00</span><span class="p">,</span> <span class="mf">2100.32</span><span class="p">,</span> <span class="mf">2000.00</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;Y011&#39;</span><span class="p">,</span> <span class="s1">&#39;Yaqub Moreno&#39;</span><span class="p">,</span> <span class="mf">22500.77</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1000.00</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;D057&#39;</span><span class="p">,</span> <span class="s1">&#39;Derrick Blackmore&#39;</span><span class="p">,</span> <span class="mf">25000.00</span><span class="p">,</span> <span class="mf">132.71</span><span class="p">,</span> <span class="mf">10000.00</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;G101&#39;</span><span class="p">,</span> <span class="s1">&#39;Gordon Velazquez&#39;</span><span class="p">,</span> <span class="mf">33650.00</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1800.00</span><span class="p">);</span>
+    
+    <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Customer</span> 
+      <span class="p">(</span><span class="n">custId</span><span class="p">,</span> <span class="n">custFullName</span><span class="p">,</span> <span class="n">custTelNo</span><span class="p">,</span> <span class="n">custEmail</span><span class="p">,</span> <span class="n">custAddress</span><span class="p">,</span> <span class="n">custPostCode</span><span class="p">,</span> <span class="n">custCity</span><span class="p">,</span> <span class="n">agentId</span><span class="p">)</span> 
+    <span class="k">VALUES</span>
+      <span class="p">(</span><span class="s1">&#39;0A131&#39;</span><span class="p">,</span> <span class="s1">&#39;Ivor Sharpe&#39;</span><span class="p">,</span> <span class="s1">&#39;01905450717&#39;</span><span class="p">,</span> <span class="s1">&#39;7bbr28886@liadisma.cf&#39;</span><span class="p">,</span> <span class="s1">&#39;1 Birchwood Way&#39;</span><span class="p">,</span> <span class="s1">&#39;AL2 2SE&#39;</span><span class="p">,</span> <span class="s1">&#39;Lyndhurst&#39;</span><span class="p">,</span> <span class="s1">&#39;A034&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;1B556&#39;</span><span class="p">,</span> <span class="s1">&#39;Rikki Ratliff&#39;</span><span class="p">,</span> <span class="s1">&#39;+447461044821&#39;</span><span class="p">,</span> <span class="s1">&#39;laldom@usapodcasd.com&#39;</span><span class="p">,</span> <span class="s1">&#39;5 Primley Gardens&#39;</span><span class="p">,</span> <span class="s1">&#39;EX10 9LE&#39;</span><span class="p">,</span> <span class="s1">&#39;Sidmouth&#39;</span><span class="p">,</span> <span class="s1">&#39;G101&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;0C001&#39;</span><span class="p">,</span> <span class="s1">&#39;Yusha Hester&#39;</span><span class="p">,</span> <span class="s1">&#39;01539-491043&#39;</span><span class="p">,</span> <span class="s1">&#39;yusha.he@googleappmail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;51 Well Lane&#39;</span><span class="p">,</span> <span class="s1">&#39;L16 5ET&#39;</span><span class="p">,</span> <span class="s1">&#39;Childwall&#39;</span><span class="p">,</span> <span class="s1">&#39;A034&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;1A945&#39;</span><span class="p">,</span> <span class="s1">&#39;Jagoda Gregory&#39;</span><span class="p">,</span> <span class="s1">&#39;0750 4961742&#39;</span><span class="p">,</span> <span class="s1">&#39;qthinkerh@qzick.com&#39;</span><span class="p">,</span> <span class="s1">&#39;9 Gerald Road&#39;</span><span class="p">,</span> <span class="s1">&#39;BN11 5QG&#39;</span><span class="p">,</span> <span class="s1">&#39;Worthing&#39;</span><span class="p">,</span> <span class="no">NULL</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;0L990&#39;</span><span class="p">,</span> <span class="s1">&#39;Montell Lake&#39;</span><span class="p">,</span> <span class="s1">&#39;01 6702 06586&#39;</span><span class="p">,</span> <span class="s1">&#39;montell@getthemp3.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Flat 20, George Belt House, Smart Street&#39;</span><span class="p">,</span> <span class="s1">&#39;RM2 6BU&#39;</span><span class="p">,</span> <span class="s1">&#39;Romford&#39;</span><span class="p">,</span> <span class="s1">&#39;R133&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;0V321&#39;</span><span class="p">,</span> <span class="s1">&#39;Patryk Lowry&#39;</span><span class="p">,</span> <span class="s1">&#39;07863233367&#39;</span><span class="p">,</span> <span class="s1">&#39;gcameron.ransom.j@fridaymovo.com&#39;</span><span class="p">,</span> <span class="s1">&#39;15 Chalforde Gardens&#39;</span><span class="p">,</span> <span class="s1">&#39;SA73 3QZ&#39;</span><span class="p">,</span> <span class="s1">&#39;Nailsea&#39;</span><span class="p">,</span> <span class="s1">&#39;R133&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;1V478&#39;</span><span class="p">,</span> <span class="s1">&#39;Rhonda West&#39;</span><span class="p">,</span> <span class="s1">&#39;01672 267 995&#39;</span><span class="p">,</span> <span class="s1">&#39;rhmad.hawlery.7h@tol.net&#39;</span><span class="p">,</span> <span class="s1">&#39;221 Eccles Old Road&#39;</span><span class="p">,</span> <span class="s1">&#39;M6 8JH&#39;</span><span class="p">,</span> <span class="s1">&#39;Salford&#39;</span><span class="p">,</span> <span class="no">NULL</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;0P55A&#39;</span><span class="p">,</span> <span class="s1">&#39;Viola Ayers&#39;</span><span class="p">,</span> <span class="s1">&#39;+44797 8107958&#39;</span><span class="p">,</span> <span class="s1">&#39;viola@bookabus.org&#39;</span><span class="p">,</span> <span class="s1">&#39;West View, Reddings Lane&#39;</span><span class="p">,</span> <span class="s1">&#39;B46 2DN&#39;</span><span class="p">,</span> <span class="s1">&#39;Nether Whitacre&#39;</span><span class="p">,</span> <span class="s1">&#39;Y011&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;1D100&#39;</span><span class="p">,</span> <span class="s1">&#39;Alister McDaniel&#39;</span><span class="p">,</span> <span class="s1">&#39;01297-311561&#39;</span><span class="p">,</span> <span class="s1">&#39;amd@walmartnet.com&#39;</span><span class="p">,</span> <span class="s1">&#39;15 Co Operative Row&#39;</span><span class="p">,</span> <span class="s1">&#39;NN10 0RJ&#39;</span><span class="p">,</span> <span class="s1">&#39;Rushden&#39;</span><span class="p">,</span> <span class="s1">&#39;R133&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;0J867&#39;</span><span class="p">,</span> <span class="s1">&#39;Salahuddin Mercado&#39;</span><span class="p">,</span> <span class="s1">&#39;07 753233837&#39;</span><span class="p">,</span> <span class="s1">&#39;salah@dpics.fun&#39;</span><span class="p">,</span> <span class="s1">&#39;47 Holtwood Drive&#39;</span><span class="p">,</span> <span class="s1">&#39;PL21 9TH&#39;</span><span class="p">,</span><span class="s1">&#39;Ivybridge&#39;</span><span class="p">,</span> <span class="no">NULL</span><span class="p">);</span>
+    
+    <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Sale</span> 
+      <span class="p">(</span><span class="n">saleRefNo</span><span class="p">,</span> <span class="n">saleDate</span><span class="p">,</span> <span class="n">saleTotal</span><span class="p">,</span> <span class="n">deliveryDate</span><span class="p">,</span> <span class="n">PayPalTransId</span><span class="p">,</span> <span class="n">custId</span><span class="p">)</span> 
+    <span class="k">VALUES</span>
+      <span class="p">(</span><span class="mi">1003323</span><span class="p">,</span> <span class="s1">&#39;2020-02-25&#39;</span><span class="p">,</span> <span class="mf">425.97</span><span class="p">,</span> <span class="s1">&#39;2020-02-28&#39;</span><span class="p">,</span> <span class="s1">&#39;TA4387247&#39;</span><span class="p">,</span> <span class="s1">&#39;0A131&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1006326</span><span class="p">,</span> <span class="s1">&#39;2018-03-05&#39;</span><span class="p">,</span> <span class="mf">849.99</span><span class="p">,</span> <span class="s1">&#39;2018-03-08&#39;</span><span class="p">,</span> <span class="s1">&#39;TB8743293&#39;</span><span class="p">,</span> <span class="s1">&#39;1B556&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1007329</span><span class="p">,</span> <span class="s1">&#39;2018-05-08&#39;</span><span class="p">,</span> <span class="mf">761.98</span><span class="p">,</span> <span class="s1">&#39;2018-05-11&#39;</span><span class="p">,</span> <span class="s1">&#39;TC3874293&#39;</span><span class="p">,</span> <span class="s1">&#39;1A945&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1002312</span><span class="p">,</span> <span class="s1">&#39;2020-06-23&#39;</span><span class="p">,</span> <span class="mf">541.98</span><span class="p">,</span> <span class="s1">&#39;2020-06-26&#39;</span><span class="p">,</span> <span class="s1">&#39;TD9384209&#39;</span><span class="p">,</span> <span class="s1">&#39;1B556&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1004425</span><span class="p">,</span> <span class="s1">&#39;2018-08-05&#39;</span><span class="p">,</span> <span class="mf">1011.50</span><span class="p">,</span> <span class="s1">&#39;2018-08-08&#39;</span><span class="p">,</span> <span class="s1">&#39;TE8349248&#39;</span><span class="p">,</span> <span class="s1">&#39;1V478&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1009928</span><span class="p">,</span> <span class="s1">&#39;2020-09-20&#39;</span><span class="p">,</span> <span class="mf">596.74</span><span class="p">,</span> <span class="s1">&#39;2020-09-23&#39;</span><span class="p">,</span> <span class="s1">&#39;TF3492484&#39;</span><span class="p">,</span> <span class="s1">&#39;0P55A&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1007834</span><span class="p">,</span> <span class="s1">&#39;2019-03-05&#39;</span><span class="p">,</span> <span class="mf">927.97</span><span class="p">,</span> <span class="s1">&#39;2019-03-08&#39;</span><span class="p">,</span> <span class="s1">&#39;TG3482394&#39;</span><span class="p">,</span> <span class="s1">&#39;0L990&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1009926</span><span class="p">,</span> <span class="s1">&#39;2020-02-13&#39;</span><span class="p">,</span> <span class="mf">650.00</span><span class="p">,</span> <span class="s1">&#39;2020-02-16&#39;</span><span class="p">,</span> <span class="s1">&#39;TH3884334&#39;</span><span class="p">,</span> <span class="s1">&#39;0V321&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1004072</span><span class="p">,</span> <span class="s1">&#39;2018-08-21&#39;</span><span class="p">,</span> <span class="mf">431.65</span><span class="p">,</span> <span class="s1">&#39;2018-08-24&#39;</span><span class="p">,</span> <span class="s1">&#39;TI8372947&#39;</span><span class="p">,</span> <span class="s1">&#39;1D100&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1002008</span><span class="p">,</span> <span class="s1">&#39;2018-10-12&#39;</span><span class="p">,</span> <span class="mf">574.05</span><span class="p">,</span> <span class="s1">&#39;2018-10-15&#39;</span><span class="p">,</span> <span class="s1">&#39;TJ3984209&#39;</span><span class="p">,</span> <span class="s1">&#39;0J867&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1007799</span><span class="p">,</span> <span class="s1">&#39;2018-01-08&#39;</span><span class="p">,</span> <span class="mf">887.50</span><span class="p">,</span> <span class="s1">&#39;2018-01-12&#39;</span><span class="p">,</span> <span class="s1">&#39;TK8237492&#39;</span><span class="p">,</span> <span class="s1">&#39;0A131&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1002127</span><span class="p">,</span> <span class="s1">&#39;2018-10-09&#39;</span><span class="p">,</span> <span class="mf">468.98</span><span class="p">,</span> <span class="s1">&#39;2018-10-13&#39;</span><span class="p">,</span> <span class="s1">&#39;TL3240922&#39;</span><span class="p">,</span> <span class="s1">&#39;1D100&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1003582</span><span class="p">,</span> <span class="s1">&#39;2018-02-18&#39;</span><span class="p">,</span> <span class="mf">235.99</span><span class="p">,</span> <span class="s1">&#39;2018-02-21&#39;</span><span class="p">,</span> <span class="s1">&#39;TM3948023&#39;</span><span class="p">,</span> <span class="s1">&#39;0C001&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1001169</span><span class="p">,</span> <span class="s1">&#39;2018-09-15&#39;</span><span class="p">,</span> <span class="mf">148.44</span><span class="p">,</span> <span class="s1">&#39;2018-09-18&#39;</span><span class="p">,</span> <span class="s1">&#39;TN2394803&#39;</span><span class="p">,</span> <span class="s1">&#39;0L990&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1003187</span><span class="p">,</span> <span class="s1">&#39;2018-10-17&#39;</span><span class="p">,</span> <span class="mf">678.87</span><span class="p">,</span> <span class="s1">&#39;2018-10-20&#39;</span><span class="p">,</span> <span class="s1">&#39;TO3924809&#39;</span><span class="p">,</span> <span class="s1">&#39;0A131&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1009090</span><span class="p">,</span> <span class="s1">&#39;2020-03-02&#39;</span><span class="p">,</span> <span class="mf">311.98</span><span class="p">,</span> <span class="s1">&#39;2020-03-05&#39;</span><span class="p">,</span> <span class="s1">&#39;TP3240932&#39;</span><span class="p">,</span> <span class="s1">&#39;1V478&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1002221</span><span class="p">,</span> <span class="s1">&#39;2018-02-07&#39;</span><span class="p">,</span> <span class="mf">564.75</span><span class="p">,</span> <span class="s1">&#39;2018-02-14&#39;</span><span class="p">,</span> <span class="s1">&#39;TQ2394849&#39;</span><span class="p">,</span> <span class="s1">&#39;0V321&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1003781</span><span class="p">,</span> <span class="s1">&#39;2019-08-21&#39;</span><span class="p">,</span> <span class="mf">68.86</span><span class="p">,</span> <span class="s1">&#39;2019-08-25&#39;</span><span class="p">,</span><span class="s1">&#39;TR3294820&#39;</span><span class="p">,</span> <span class="s1">&#39;0P55A&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1009903</span><span class="p">,</span> <span class="s1">&#39;2019-08-30&#39;</span><span class="p">,</span> <span class="mf">189.75</span><span class="p">,</span> <span class="s1">&#39;2019-09-05&#39;</span><span class="p">,</span> <span class="s1">&#39;TS3942802&#39;</span><span class="p">,</span> <span class="s1">&#39;1A945&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1000102</span><span class="p">,</span> <span class="s1">&#39;2018-09-27&#39;</span><span class="p">,</span> <span class="mf">214.68</span><span class="p">,</span> <span class="s1">&#39;2018-09-30&#39;</span><span class="p">,</span> <span class="s1">&#39;TT3294843&#39;</span><span class="p">,</span> <span class="s1">&#39;0C001&#39;</span><span class="p">);</span>
+    
+    <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Giftset</span> 
+      <span class="p">(</span><span class="n">gsetId</span><span class="p">,</span> <span class="n">gsetName</span><span class="p">,</span> <span class="n">gsetPrice</span><span class="p">,</span> <span class="n">gsetDesc</span><span class="p">,</span> <span class="n">isLimited</span><span class="p">)</span> 
+    <span class="k">VALUES</span>
+      <span class="p">(</span><span class="s1">&#39;PB222&#39;</span><span class="p">,</span> <span class="s1">&#39;Protect + Hydrate Skincare Collection&#39;</span><span class="p">,</span> <span class="mf">199.99</span><span class="p">,</span> <span class="s1">&#39;Powerful protection. Intense, refreshing 24-hour hydration. Discover these high-performance formulas to defend against signs of premature aging and diminish their appearance.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PC435&#39;</span><span class="p">,</span> <span class="s1">&#39;Deluxe Recreation&#39;</span><span class="p">,</span> <span class="mf">650.00</span><span class="p">,</span> <span class="s1">&#39;Discover the most amazing products for health and wellbeing.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;LB278&#39;</span><span class="p">,</span> <span class="s1">&#39;Provence - Hand Cream Trio Gift Set&#39;</span><span class="p">,</span> <span class="mf">566.00</span><span class="p">,</span> <span class="s1">&#39;This gift contains three of our most-loved hand creams, perfect for treating your hands &amp; nails on the go.&#39;</span><span class="p">,</span> <span class="no">True</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PC515&#39;</span><span class="p">,</span> <span class="s1">&#39;High Impact Favourites Eye Essentials Makeup&#39;</span><span class="p">,</span> <span class="mf">459.99</span><span class="p">,</span> <span class="s1">&#39;Bold eye essentials, plus our #1 makeup remover. What It Does: Ramp up the drama with a get-noticed eye look. Full-size High Impact Mascara kicks up the volume and length of each and every lash.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;BB669&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm + Glow Skincare Collection Gift Set&#39;</span><span class="p">,</span> <span class="mf">385.99</span><span class="p">,</span> <span class="s1">&#39;Help unlock your skin s youth potential. Discover these high-performance formulas to deeply nourish skin and reduce the look of lines and wrinkles. Skin feels firmer, its density and elasticity significantly improved.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;CB555&#39;</span><span class="p">,</span> <span class="s1">&#39;Eau Dynamisante Collection&#39;</span><span class="p">,</span> <span class="mf">155.99</span><span class="p">,</span> <span class="s1">&#39;Vitality, freshness, firmness. Clarins Eau Dynamisante is the first fragrance to combine the benefits of aromatherapy and skin care by harnessing the natural aromas and active ingredients of plants.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;LB385&#39;</span><span class="p">,</span> <span class="s1">&#39;Pure Color Envy Lip Luxuries&#39;</span><span class="p">,</span> <span class="mf">375.99</span><span class="p">,</span> <span class="s1">&#39;For lips to envy, baby them with Pure Colour Envy Lip Care. This lip spa duo includes 2 must-haves to hydrate lips with a personalised tint, plus soothe and soften lips every night.&#39;</span><span class="p">,</span> <span class="no">True</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;CP819&#39;</span><span class="p">,</span> <span class="s1">&#39;Regular Care&#39;</span><span class="p">,</span> <span class="mf">25.99</span><span class="p">,</span> <span class="s1">&#39;An essential for daily body care.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PP257&#39;</span><span class="p">,</span> <span class="s1">&#39;No7 Men Energising Collection&#39;</span><span class="p">,</span> <span class="mf">40.30</span><span class="p">,</span> <span class="s1">&#39;This collection contains: No7 Men Energising Face, Beard &amp; Stubbble Moisturiser SPF15 50ml No7 Men Energising Gradual Tan Moisturiser 50ml No7 Men Energising Face Wash 150ml No7 Men Energising Hair &amp; Bodywash 200ml&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;LL841&#39;</span><span class="p">,</span> <span class="s1">&#39;Working Hands &amp; Healthy Feet&#39;</span><span class="p">,</span> <span class="mf">151.07</span><span class="p">,</span> <span class="s1">&#39;The highly-concentrated formulations have been developed to provide both instant relief and long-lasting results. And this multipack has everything you need.&#39;</span><span class="p">,</span> <span class="no">True</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;LL686&#39;</span><span class="p">,</span> <span class="s1">&#39;Men Anti Ageing Collection&#39;</span><span class="p">,</span> <span class="mf">210.75</span><span class="p">,</span> <span class="s2">&quot;As men&#39;s skin ages, it&#39;s structure is weakened, resulting in lines, wrinkles and a dull appearance. The renowned Protect &amp; Perfect Intense technology has now been re-energised to deliver even better anti-ageing results.&quot;</span><span class="p">,</span> <span class="no">True</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PP858&#39;</span><span class="p">,</span> <span class="s1">&#39;Grooming Wash Bag&#39;</span><span class="p">,</span> <span class="mf">46.75</span><span class="p">,</span> <span class="s1">&#39;This fragrance is an invigorating citrus herbal blend, with amber and musk.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;BL135&#39;</span><span class="p">,</span> <span class="s1">&#39;Whiskey Cooling Stones Kit&#39;</span><span class="p">,</span> <span class="mf">11.05</span><span class="p">,</span> <span class="s1">&#39;Whiskey Stones are a great alternative to ice.  Drop them in your whiskey, or any tipple, to chill your drink without diluting.  Made from 100% Soapstone, which harbours less bacteria and fewer impurities than ice. These whiskey stones can be reused time and time again, just wash and freeze again in their bag.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PB345&#39;</span><span class="p">,</span> <span class="s1">&#39;Dyson Airwrap styler Complete&#39;</span><span class="p">,</span> <span class="mf">455.44</span><span class="p">,</span> <span class="s1">&#39;The complete set of stylers from the Dyson collection. Reach new lenghts!&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PC736&#39;</span><span class="p">,</span> <span class="s1">&#39;Bellamianta Bella Babes&#39;</span><span class="p">,</span> <span class="mf">235.24</span><span class="p">,</span> <span class="s1">&#39;Apply using your luxurious Bellamianta tanning mitt in circular motions.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PB485&#39;</span><span class="p">,</span> <span class="s1">&#39;The Skin Savers Edit&#39;</span><span class="p">,</span> <span class="mf">120.50</span><span class="p">,</span> <span class="s1">&#39;Leaving no stone unturned on our quest to discover the grooming world’s latest and greatest, we trawl the globe to curate our incredible edit of results-driven heroes. Housed in an eye-catching, 20s-inspired gift box that unites 10 ‘Holy Grail’ heroes, The Skin Savers Edit boasts an array of potent, results-driven must-haves, from a fan favourite cleanser to an A-List-approved targeted treatments&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;CL230&#39;</span><span class="p">,</span> <span class="s1">&#39;Pillow Talk Lip Secrets&#39;</span><span class="p">,</span> <span class="mf">38.2</span><span class="p">,</span> <span class="s2">&quot;Make up artists don’t come much more legendary than Charlotte Tilbury; with twenty years in the industry, she’s a true trailblazer – creating looks for some of film and fashion’s most iconic faces. Epitomising modern glamour, her eponymous range stars high-performance formulas, luxury make up bags, daring eyeshadow palettes and the most exquisite, boudoir-worthy lipsticks. It&#39;s stylish, decadent and fabulously feminine.&quot;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;BC658&#39;</span><span class="p">,</span> <span class="s1">&#39;Vegan Brush Collection&#39;</span><span class="p">,</span> <span class="mf">79.67</span><span class="p">,</span> <span class="s1">&#39;Worshipped for their incandescent highlighters, buttery blushers, ultra-soft make up brushes and refillable lipsticks, Hourglass combines science, luxury and beauty to create the most magnificent make up. Blending ground-breaking active ingredients with innovative technology, the products facilitate seamlessly beautiful, ‘second skin’ finishes – and the sleek, chic packaging is yet another reason to adore it.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;CL686&#39;</span><span class="p">,</span> <span class="s1">&#39;Rae Morris Personal Set&#39;</span><span class="p">,</span> <span class="mf">381.67</span><span class="p">,</span> <span class="s1">&#39;One of the most influential make up artists in the world, Rae Morris has written the book on beauty (in fact, she’s written several of them…) Having perfected endless famous faces, she turned her hand to creating the most luxurious and effective brushes money can buy – and the results will change the way you apply make up forever.&#39;</span><span class="p">,</span> <span class="no">False</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;LP692&#39;</span><span class="p">,</span> <span class="s1">&#39;GloPRO Holographic Set&#39;</span><span class="p">,</span> <span class="mf">152.57</span><span class="p">,</span> <span class="s1">&#39;An all-in-one bundle to keep you glowing through the season, this kit includes: a limited edition, holographic GloPRO Microneedling Regeneration Tool, a Sanitizing Spritzer Bottle, a GloPRO BODY MicroTip Attachment Head, five GloPRO Skin Prep Pads, The Sculptor Skin Firming Body Cream and RADIANCE Brightening Facial Oil.&#39;</span><span class="p">,</span> <span class="no">True</span><span class="p">);</span>
+    
+    <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Product</span> 
+      <span class="p">(</span><span class="n">prodNo</span><span class="p">,</span> <span class="n">prodName</span><span class="p">,</span> <span class="n">prodUnitPrice</span><span class="p">,</span> <span class="n">prodStockLevel</span><span class="p">,</span> <span class="n">prodDesc</span><span class="p">)</span>
+    <span class="k">VALUES</span>
+      <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Pro-Collagen Spf 30 Anti-Wrinkle Day Cream&#39;</span><span class="p">,</span> <span class="mf">43.46</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="s1">&#39;This clinically proven formulation blends a powerful combination of ingredients, including padina pavonica and Ginkgo Biloba, shown to reduce the appearance of fine lines and wrinkles in 14 days&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Face 810 Facial Epilator&#39;</span><span class="p">,</span> <span class="mf">26.99</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="s1">&#39;Epilator for face, body &amp; leg .Never wait again for your body hair to grow so that wax can get it.&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Advanced Ceramide Capsules Daily Youth Restoring Serum&#39;</span><span class="p">,</span> <span class="mf">53.35</span><span class="p">,</span> <span class="mi">129</span><span class="p">,</span> <span class="s2">&quot;Experience a triple-powered capsule of youth that focuses on enhancing skins&#39; barrier repair function, increasing moisturization within the surface of the skin and minimize the appearance of aging signs.&quot;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Associates Discovery Wellbeing Miniature Bath &amp; Shower Oil&#39;</span><span class="p">,</span> <span class="mf">5.88</span><span class="p">,</span> <span class="mi">344</span><span class="p">,</span> <span class="s1">&#39;Artisans in the field of Aromatherapy, we harness the incredible powers of the finest essential oils, purest extracts and natural ingredients to include in our award-winning products.&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Obsession for Women Eau de Parfum&#39;</span><span class="p">,</span> <span class="mf">79.88</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;Obsession for Women Eau de Parfum is made up of a provocative fragrance that returns us to an era of sensual femininity. A bold, aromatic scent that empowers with refreshing mandarin bergamot.&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Chloe Eau De Parfum For Women&#39;</span><span class="p">,</span> <span class="mf">85.05</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;This amber floral is meant to embody the classic scent. It features a bouquet of powdered florals composed of peony, lychée and freesia.&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Bluesky Gel Nail Polish Beauty Advent Calendar&#39;</span><span class="p">,</span> <span class="mf">55.71</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="s1">&#39;All I want for Christmas is.... The Advent Calendar! With 25 days of gel polish &amp; Nail accessories to keep your nails looking fabulous for the party season!&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;UniqONE Professional Hair Treatment&#39;</span><span class="p">,</span> <span class="mf">8.49</span><span class="p">,</span> <span class="mi">331</span><span class="p">,</span> <span class="s1">&#39;The first treatment of its kind to launch into the Professional Haircare market. The unique solution that women have been looking for. When applied to damp hair it gives smooth, soft, shiny, hair without weight.&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;Coconut Miracle Oil Conditioner for Damaged&#39;</span><span class="p">,</span> <span class="mf">7.99</span><span class="p">,</span> <span class="mi">371</span> <span class="p">,</span><span class="s1">&#39;Wishes can come true with this Tahitian inspired extra strength reviving conditioner. Help transform dry course hair into princess perfection with this ultra-rich blend with Coconut Oil, Vanilla Bean extract and essence of Tiare – a tropical flower from Tahiti.&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Hair Mask with Keratin and Milk Protein for Dry, Damaged and Chemically Treated Hair&#39;</span><span class="p">,</span> <span class="mf">6.15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Special mask / conditioner with keratin for treated hair.&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;Honey Bath&#39;</span><span class="p">,</span> <span class="mf">42.00</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="s1">&#39;The über-luxurious Honey Bath (complete with your very own wooden honey dipper) is renowned as the ultimate calm-restorer, lulling you into a state of blissful relaxation while protecting skin and balancing moisture levels. Sweet almond proteins, hydrolyzed rice, and oat proteins along with pro-vitamin B-5 offer strengthen skin while enhancing hydration. Perfect as a pick-me-up treat or as a present for your favourite boujee bath lover and get ready for some serious R&amp;R.&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;Multi-Miracle Glow&#39;</span><span class="p">,</span> <span class="mf">10.03</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="s2">&quot;This Multi Miracle Glow balm is the ultimate does-everything skin care essential. Enriched with nourishing, organic ingredients, it makes a sensuous (effortless) cleansing balm, unctuous hydrating treatment and intensive, overnight mask to replenish moisture and recover skin&#39;s glow.&quot;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="s1">&#39;Mini Body Souffle Quartet&#39;</span><span class="p">,</span> <span class="mf">40.88</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="s2">&quot;This strictly limited edition Mini Body Souffle Quartet unites of four of the brand&#39;s iconic body creams for sumptuous self-care Sundays.&quot;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;Biggie Biggie Bum Bum Cream&#39;</span><span class="p">,</span> <span class="mf">72.44</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="s1">&#39;Pronounced ‘boom boom’ (who knew?), Sol de Janeiro’s best-smelling body cream defies succinct description. The scent is sensational – like holidays and piña coladas and coconut rolled into one gorgeous cocktail of scrumptiousness (yum!). Totally intoxicating, this limited edition, ‘Biggie Biggie’ tub is the perfect gift for all those in need of some sunshine-inspired body care (say “aye!”); this potion is Copacabana distilled into one mega, marigold pot.&#39;</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;The Cream&#39;</span><span class="p">,</span> <span class="mf">205.12</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="s1">&#39;Needing no introduction, Augustinus Bader’s potent potions are your one-stop, skin-transforming shop! Harnessing cutting-edge stem cell research to repair signs of damage, these do-it-all formulas work overtime to revitalise skin that’s in need of a jump-start. Developed by pioneering stem cell and biomedical scientist Professor Augustinus Bader, The Cream and The Rich Cream are powdered by his patented Trigger Factor Complex (TFC8) – a ground-breaking compound that works to ‘unlock’ skin’s innate code and activate regeneration.&#39;</span><span class="p">);</span>
+    
+    <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Giftset_Product</span>
+      <span class="p">(</span><span class="n">gsetId</span><span class="p">,</span> <span class="n">prodNo</span><span class="p">,</span> <span class="n">prodQuantity</span><span class="p">)</span>
+    <span class="k">VALUES</span>
+      <span class="p">(</span><span class="s1">&#39;PB222&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PB222&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PB222&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PB345&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PB345&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;BB669&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PC435&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PC435&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;PC435&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;LL686&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="s1">&#39;LL686&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    
+    <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Sale_Detail</span>
+      <span class="p">(</span><span class="n">saleRefNo</span><span class="p">,</span> <span class="n">gsetId</span><span class="p">,</span> <span class="n">gsetQuantity</span><span class="p">)</span>
+    <span class="k">VALUES</span> 
+      <span class="p">(</span><span class="mi">1000102</span><span class="p">,</span> <span class="s1">&#39;PB222&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1000102</span><span class="p">,</span> <span class="s1">&#39;CP819&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1003323</span><span class="p">,</span> <span class="s1">&#39;CB555&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1003323</span><span class="p">,</span> <span class="s1">&#39;LB385&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1006326</span><span class="p">,</span> <span class="s1">&#39;PC435&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1006326</span><span class="p">,</span> <span class="s1">&#39;PB222&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1007329</span><span class="p">,</span> <span class="s1">&#39;LB385&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1007329</span><span class="p">,</span> <span class="s1">&#39;BB669&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1002312</span><span class="p">,</span> <span class="s1">&#39;CB555&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1002312</span><span class="p">,</span> <span class="s1">&#39;BB669&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1004425</span><span class="p">,</span> <span class="s1">&#39;PB485&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1004425</span><span class="p">,</span> <span class="s1">&#39;PC435&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1009928</span><span class="p">,</span> <span class="s1">&#39;BB669&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1009928</span><span class="p">,</span> <span class="s1">&#39;LL686&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1007834</span><span class="p">,</span> <span class="s1">&#39;CB555&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1007834</span><span class="p">,</span> <span class="s1">&#39;BB669&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+      <span class="p">(</span><span class="mi">1009926</span><span class="p">,</span> <span class="s1">&#39;PC435&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    </pre>
+    </div>
+
+</details>
+<p></p>
+<figure>
+  <img src="img/bodycare/pop_agent.png" width="450px" />
+  <figcaption>Fig. 9 - Populated Agent table</figcaption>
+</figure>
+<figure>
+  <img src="img/bodycare/pop_customer.png" width="800px" />
+  <figcaption>Fig. 10 - Populated Customer table</figcaption>
+</figure>
+<figure>
+  <img src="img/bodycare/pop_sale.png" width="350px" />
+  <figcaption>Fig. 11 - Populated Sale table</figcaption>
+</figure>
+<figure>
+  <img src="img/bodycare/pop_giftset.png" width="550px" />
+  <figcaption>Fig. 12 - Populated Giftset table</figcaption>
+</figure>
+<figure>
+  <img src="img/bodycare/pop_product.png" width="650px" />
+  <figcaption>Fig. 13 - Populated Product table</figcaption>
+</figure>
+<figure>
+  <img src="img/bodycare/pop_sale_detail.png" width="150px" />
+  <figcaption>Fig. 14 - Populated Sale_Detail table</figcaption>
+</figure>
+<figure>
+  <img src="img/bodycare/pop_giftset_product.png" width="150px" />
+  <figcaption>Fig. 15 - Populated Giftset_Product table</figcaption>
+</figure>
+<p></p>
+<h2 id="8.-Sample-queries-">8. Sample queries <a id="queries" /><a class="anchor-link" href="#8.-Sample-queries-">&#182;</a></h2><p>Finally, we can use some queries to test out the database.</p>
+<p></p>
+<h5 id="Query-1:-Find-low-in-stock">Query 1: Find low in stock<a class="anchor-link" href="#Query-1:-Find-low-in-stock">&#182;</a></h5><p>Display a list of product numbers, product names and stock level for those products for which the stock level is less than 30. This query should be used to check if a product has reached its minimum stock level, if it has, a purchase order will be raised to replenish stock.</p>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">prodNo</span><span class="p">,</span> <span class="n">prodName</span><span class="p">,</span> <span class="n">prodStockLevel</span> <span class="k">AS</span> <span class="s1">&#39;In Stock&#39;</span>
+<span class="k">FROM</span> <span class="n">Product</span>
+<span class="k">WHERE</span> <span class="n">prodStockLevel</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">;</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/query1.png" width="400px" />
+  <figcaption>Fig. 16 - Output of Query 1</figcaption>
+</figure>
+<p></p>
+<h5 id="Query-2:-Populate-catalogue">Query 2: Populate catalogue<a class="anchor-link" href="#Query-2:-Populate-catalogue">&#182;</a></h5><p>Display giftset names, prices and descriptions for all giftsets. This query is used to retrieve all giftsets in order to populate the company’s catalogue.</p>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">gsetName</span><span class="p">,</span> <span class="n">gsetPrice</span><span class="p">,</span> <span class="n">gsetDesc</span>
+<span class="k">FROM</span> <span class="n">Giftset</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">gsetName</span><span class="p">;</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/query2.png" width="650px" />
+  <figcaption>Fig. 17 - Output of Query 2</figcaption>
+  <p></p>
+</figure><h5 id="Query-3:-Charity-donations-calculator">Query 3: Charity donations calculator<a class="anchor-link" href="#Query-3:-Charity-donations-calculator">&#182;</a></h5><p>Display the total amount of money to donate to charity for each year ordered by year. BodyCare Ltd. has a policy of donating 2% of its annual total sales value to local charities.</p>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">saleDate</span><span class="p">)</span> <span class="k">AS</span> <span class="kt">Year</span><span class="p">,</span> <span class="nf">SUM</span><span class="p">(</span><span class="n">saleTotal</span><span class="p">),</span> 
+  <span class="nf">ROUND</span><span class="p">(</span><span class="nf">SUM</span><span class="p">(</span><span class="n">saleTotal</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="s1">&#39;For charity&#39;</span>
+<span class="k">FROM</span> <span class="n">Sale</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="kt">Year</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="kt">Year</span><span class="p">;</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/query3.png" width="300px" />
+  <figcaption>Fig. 18 - Output of Query 3</figcaption>
+<p></p>
+</figure><h5 id="Query-4:-Commission-for-sale-calculator">Query 4: Commission for sale calculator<a class="anchor-link" href="#Query-4:-Commission-for-sale-calculator">&#182;</a></h5><p>Calculate the commission on sale for sale number 1007834. Commission is paid at 10% of the value of a set, but then goes 
+up to 20% after a agent’s annual sales target is reached.</p>
+<p></p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">s</span><span class="p">.</span><span class="n">saleRefNo</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">saleDate</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">agentFullName</span><span class="p">,</span> <span class="k">IF</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">agentCommission</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">.</span><span class="n">annualSalesTarget</span><span class="p">,</span> <span class="nf">SUM</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">saleTotal</span><span class="p">)</span><span class="o">*</span><span class="mf">0.2</span><span class="p">,</span> <span class="nf">SUM</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">saleTotal</span><span class="p">)</span><span class="o">*</span><span class="mf">0.1</span><span class="p">)</span> <span class="k">AS</span> <span class="s1">&#39;Commission&#39;</span>
+<span class="k">FROM</span> <span class="n">Agent</span> <span class="k">AS</span> <span class="n">a</span>
+<span class="k">JOIN</span> <span class="n">Customer</span> <span class="k">AS</span> <span class="n">c</span> <span class="k">ON</span> <span class="n">a</span><span class="p">.</span><span class="n">agentId</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">agentId</span>
+<span class="k">JOIN</span> <span class="n">Sale</span> <span class="k">AS</span> <span class="n">s</span> <span class="k">ON</span> <span class="n">c</span><span class="p">.</span><span class="n">custId</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">custId</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">s</span><span class="p">.</span><span class="n">saleRefNo</span>
+<span class="k">HAVING</span> <span class="n">s</span><span class="p">.</span><span class="n">saleRefNo</span> <span class="o">=</span> <span class="mi">1007834</span><span class="p">;</span>
+</pre></div>
+<p></p>
+<figure>
+  <img src="img/bodycare/query4.png" width="400px" />
+  <figcaption>Fig. 19 - Output of Query 4</figcaption>
+</figure><p>We have gone a long way, from specifications and reqirements to a functional database architecture. It is now up to potential investors, managers, and other stakeholders to see wether the project has enough potential to be fully developed.</p>
+<p>We have revised some key concepts in database modelling, architecture and implementation. Hope you found it useful and enjoyed the journey!</p>
+
+</div>
+</div>
+<p></p>
+<p></p>
+</body>
+
+
+
+
+
+
+
+</html>
